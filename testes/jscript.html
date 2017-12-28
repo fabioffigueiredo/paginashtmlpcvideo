@@ -1,65 +1,28 @@
-<html>
-<head>
-<style type="text/css">
-        body {
-	font-family: arial, helvetica;
-	font-size:18px;
-	background-image:url("login.jpg");
-	background-repeat:no-repeat;
-	background-position:top center;
-	padding: 0px;
-	margin: 0px;
-	text-align: center;
-	margin-left: 50px;
-    	}
 
 
-.titulo {
-	color: white;
-	font-weight: bold;
-	font-size: 20px;
-    color: #6D767D;
-}
+        var pathSite = 'https://v3.webcasters.com.br/';
+        var win = new Window();
+        var codTransmissao = 526451;
+    var codConferencia = 0;
+        var codCliente = 67;
+        var eventoAberto = 1;
+        var bInscricao = 0;
 
+        if(bInscricao == 1)
+        {
+            eventoAberto = 1;
+        }
 
+        win.create('winLoginSenhaPadrao', 'Login', 207, 323,  false, true, false);
+        win.insertHtml('winLoginSenhaPadrao', HtmlLoginSenhaPadrao);
 
-#WebCastersLogin, #WebCastersNome, #WebCastersCidade, #WebCastersEmpresa, #WebCasterstelefone , #WebCastersCargo, #selLogin{
-	width: 300px;
-	height: 30px;
-	font-size: 18px;
-	
-}
+        win.create('winLoginAbertoPadrao', 'Login', 207, 323,  false, true, false);
+        win.insertHtml('winLoginAbertoPadrao', HtmlLoginAbertoPadrao);
 
-#WebCastersBtnEntrar {
-	font-size: 16px;
-}
+        function initPaginaLogin()
+        {
 
-
-.titulo1 {	color: white;
-	font-weight: bold;
-	font-size: 20px;
-    color: #6D767D;
-}
-.titulo11 {color: white;
-	font-weight: bold;
-	font-size: 20px;
-    color: #6D767D;
-}
-.titulo111 {color: white;
-	font-weight: bold;
-	font-size: 20px;
-    color: #6D767D;
-}
-.titulo1111 {color: white;
-	font-weight: bold;
-	font-size: 20px;
-    color: #6D767D;
-}
-</style>
-
-
-<script type="text/javascript">
-    if(iframeTemplateLogin.document.getElementById('WebCastersLogin') == null    || iframeTemplateLogin.document.getElementById('WebCastersBtnEntrar') == null ) {InitLoginPadrao();}
+	if(iframeTemplateLogin.document.getElementById('WebCastersLogin') == null    || iframeTemplateLogin.document.getElementById('WebCastersBtnEntrar') == null ) {InitLoginPadrao();}
 
         PegaObjetos();
 
@@ -93,9 +56,35 @@ var campoEstado = new Campo();
 var campoTelefone = new Campo();
 var campoDescricao = new Campo();
 
+function PegaObjetos()
+{
 
+    //Preenche as informações do evento
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoNome') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoNome').innerHTML = 'PreparAV1-2016.1 - Gestão da Qualidade'; }
 
-//Associa os campos com os objetos javascript
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoDescricao') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoDescricao').innerHTML = ''; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoDataInicio') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoDataInicio').innerHTML = '16/04/2016'; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoHoraInicio') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoHoraInicio').innerHTML = '12:15'; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoDataFim') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoDataFim').innerHTML = '16/04/2016'; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoHoraFim') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoHoraFim').innerHTML = '13:00'; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersIPUsuario') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersIPUsuario').innerHTML = '172.31.33.211'; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersHostName') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersHostName').innerHTML = '172.31.33.211'; }
+
+    //Associa os campos com os objetos javascript
     if(eventoAberto == 1)
     { if($('txt_loginabertopadrao') != null) { campoLogin = $('txt_loginabertopadrao'); } }
     else
@@ -151,8 +140,13 @@ var campoDescricao = new Campo();
     if(iframeTemplateLogin.document.getElementById('WebCastersDescricao') != null)
     { campoDescricao = iframeTemplateLogin.document.getElementById('WebCastersDescricao'); }
 
+    // lê o título do template
+    if (iframeTemplateLogin.document.title.trim() != '') {
+        document.title = iframeTemplateLogin.document.title + ' - PreparAV1-2016.1 - Gestão da Qualidade';
+    }
+}
 
-  function InitSelecionaCliente()
+        function InitSelecionaCliente()
         {
             win.create('winSelecionaCliente', 'SelecionaCliente', 173, 323, false, true, false);
             win.insertHtml('winSelecionaCliente', HtmlSelecionaCliente);
@@ -183,8 +177,7 @@ var campoDescricao = new Campo();
                 campoLogin.focus();
                 return;
             }
-            
-            }
+
             // se não for transmissão aberta, nem inscrição, vê se o usuário pôs a senha
             if (eventoAberto != 1 && bInscricao != 1 && campoSenha.value == '') {
                 alert('É preciso preencher a senha.');
@@ -253,143 +246,4 @@ var campoDescricao = new Campo();
                     break;
 
                 case '!': //Conferido, vai lá participar da sua conferência
-                visualizarConfer…
-
-
-    function valida(){
-                if(valida_cpf(document.getElementById('WebCastersEmpresa').value)){
-                    alert('CPF Válido');
-                }else{
-                    alert('CPF Inválido');
-                if(!campoEmpresa.valida()){
-                alert('O CPF não é valido');
-                campoEmpresa.focus();
-                return;
-            }
-          }
-            }
-            
-            function valida_cpf(cpf){
-                  var numeros, digitos, soma, i, resultado, digitos_iguais;
-                  digitos_iguais = 1;
-                  if (cpf.length < 11)
-                        return false;
-                  for (i = 0; i < cpf.length - 1; i++)
-                        if (cpf.charAt(i) != cpf.charAt(i + 1))
-                              {
-                              digitos_iguais = 0;
-                              break;
-                              }
-                  if (!digitos_iguais)
-                        {
-                        numeros = cpf.substring(0,9);
-                        digitos = cpf.substring(9);
-                        soma = 0;
-                        for (i = 10; i > 1; i--)
-                              soma += numeros.charAt(10 - i) * i;
-                        resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-                        if (resultado != digitos.charAt(0))
-                              return false;
-                        numeros = cpf.substring(0,10);
-                        soma = 0;
-                        for (i = 11; i > 1; i--)
-                              soma += numeros.charAt(11 - i) * i;
-                        resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-                        if (resultado != digitos.charAt(1))
-                              return false;
-                        return true;
-                        }
-                  else
-                        return false;
-            }
-	
-    function mascara(t, mask){
-        var i = t.value.length;
-        var saida = mask.substring(1,0);
-        var texto = mask.substring(i)
-        if (texto.substring(0,1) != saida){
-        t.value += texto.substring(0,1);
- }
- }
-
-
-    function toggleLogin() {
-        var ds = '';
-        var di = '';
-        if (document.getElementById('WebCastersCargo').selectedIndex == 2) {
-            ds = 'block';
-            di = 'none';
-        } else {
-            ds = 'none';
-            di = 'block';
-        }
-
-        document.getElementById('selLogin').style.display = ds;
-        document.getElementById('WebCastersNome').style.display = di;
-        document.getElementById('labelEmail').style.display = di;
-        document.getElementById('WebCastersLogin').style.display = di;
-        
-    }
-
-    function copyLogin() {
-        var index = document.getElementById('selLogin').selectedIndex;
-        var option = document.getElementById('selLogin').options[index];
-        document.getElementById('WebCastersNome').value = option.text;
-        document.getElementById('WebCastersLogin').value = option.value;
-        
-        
-
-    }
-    
-
-
-</script>
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>TV VIP</title>
-</head>
-<body>
-<center>
-
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<table name="table1" border=0 cellpadding=4 cellspacing=4>
-<tr>
-  <td align=left><table border=0 cellpadding=4 cellspacing=4>
-    <tr>
-      <td align=right class=titulo111><span id="labelNome">Nome<span style="color:red">*</span>:</span></td>
-      <td align=left><input type="text" id="WebCastersNome" /></td>
-    </tr>
-    <tr>
-        <td align="right" class="titulo111">CPF</td>
-        <td align="left">
-            <input type="text" id="WebCastersEmpresa" name="cpf" maxlength="11" placeholder="Não coloque ponto nem traço"></td>
-            <!--
-                onkeypress="mascara(this, '###.###.###-##')" maxlength="14" placeholder="999.999.999-99"
-    <input name="cpf" type="text" id="cpf" maxlength="11" /> 
-    <input type="button" name="validar" id="validar" value="Validar CPF" onClick="valida()" /> -->
-    </tr>
-    <tr>
-      <td align=right class=titulo111><span id="labelEmail">E-mail<span style="color:red">*</span>:</span></td>
-      <td align=left><input type="text" id="WebCastersLogin" <span class="titulo1111">
-        <input type="button" name="validar" id="WebCastersBtnEntrar" value="Entrar"  onClick="valida()" />
-        </span></td>
-    </tr>
-   
-      
-    <tr>
-      <td align=right colspan=2 class=titulo111>&nbsp;</td>
-    </tr>
-    <tr>
-      <td align=right colspan=2 class=titulo111 style="font-size:14px;color:red;text-align:center">&nbsp;</td>
-    </tr>
-  </table></td>
-</tr>
-</table>
-<br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br />
-</center>    
-
-
-</body>
-</html>
+                    visualizarConfer…

@@ -59,11 +59,214 @@
 
 
 <script type="text/javascript">
+    if(iframeTemplateLogin.document.getElementById('WebCastersLogin') == null    || iframeTemplateLogin.document.getElementById('WebCastersBtnEntrar') == null ) {InitLoginPadrao();}
+
+        PegaObjetos();
+
+        //verifica a mensagem de erro
+        msgErro = '';
+    if(msgErro.length > 0)
+    {
+        alert(msgErro);
+    }
+
+        // campoLogin.focus(); // acha-se que o tab está desordenado
+}
+
+Campo = Type.classCreate();
+Campo.prototype = {
+    initialize: function()
+    {
+        this.value = '';
+        this.disabled = true;
+        this.focus = function(){};
+    }
+}
+
+var campoLogin = new Campo();
+var campoSenha = new Campo();
+var campoNome = new Campo();
+var campoEmpresa = new Campo();
+var campoCargo = new Campo();
+var campoCidade = new Campo();
+var campoEstado = new Campo();
+var campoTelefone = new Campo();
+var campoDescricao = new Campo();
+
+
+
+//Associa os campos com os objetos javascript
+    if(eventoAberto == 1)
+    { if($('txt_loginabertopadrao') != null) { campoLogin = $('txt_loginabertopadrao'); } }
+    else
+    { if($('txt_loginsenhapadrao') != null) { campoLogin = $('txt_loginsenhapadrao'); } }
+    if(iframeTemplateLogin.document.getElementById('WebCastersLogin') != null)
+    {
+        campoLogin = iframeTemplateLogin.document.getElementById('WebCastersLogin');
+    }
+
+    if($('txt_senha') != null) { campoSenha = $('txt_senha'); }
+    if(iframeTemplateLogin.document.getElementById('WebCastersSenha') != null)
+    {
+        campoSenha = iframeTemplateLogin.document.getElementById('WebCastersSenha');
+        //simpleAddEvent(campoLogin,'keypress',function(){executaLoginOnKeyPress(event);} );
+    }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersBtnEntrar') != null)
+    {
+        simpleAddEvent(iframeTemplateLogin.document.getElementById('WebCastersBtnEntrar'),'click',executaLogin);
+    }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersLinkAcesso') != null)
+    {
+        try {
+
+            var endereco = "/Login.aspx"
+                + "?CodTransmissao=" + codTransmissao
+                + "&loginexterno=" +  iframeTemplateLogin.document.getElementById('WebCastersLogin').value
+                + "&senhaexterno=" + iframeTemplateLogin.document.getElementById('WebCastersSenha').value
+            iframeTemplateLogin.document.getElementById('WebCastersLinkAcesso').href = endereco;
+        } catch (e) {}
+    }
+
+    if($('txt_nome') != null) { campoNome = $('txt_nome'); }
+    if(iframeTemplateLogin.document.getElementById('WebCastersNome') != null)
+    { campoNome = iframeTemplateLogin.document.getElementById('WebCastersNome');}
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEmpresa') != null)
+    { campoEmpresa = iframeTemplateLogin.document.getElementById('WebCastersEmpresa'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersCargo') != null)
+    { campoCargo = iframeTemplateLogin.document.getElementById('WebCastersCargo'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersCidade') != null)
+    { campoCidade = iframeTemplateLogin.document.getElementById('WebCastersCidade'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEstado') != null)
+    { campoEstado = iframeTemplateLogin.document.getElementById('WebCastersEstado'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersTelefone') != null)
+    { campoTelefone = iframeTemplateLogin.document.getElementById('WebCastersTelefone'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersDescricao') != null)
+    { campoDescricao = iframeTemplateLogin.document.getElementById('WebCastersDescricao'); }
+
+
+  function InitSelecionaCliente()
+        {
+            win.create('winSelecionaCliente', 'SelecionaCliente', 173, 323, false, true, false);
+            win.insertHtml('winSelecionaCliente', HtmlSelecionaCliente);
+            AbrirSelecionaClientes();
+        }
+
+        function InitLoginPadrao()
+        {
+            if(eventoAberto == 1)
+            {
+                InitLoginAbertoPadrao();
+            }
+            else
+            {
+                InitLoginSenhaPadrao();
+            }
+        }
+
+        function executaLogin()
+        {
+
+            //faz um trim no login para o caso do camarada ter vacilado na hora de colar o e-mail
+            campoLogin.value = campoLogin.value.trim();
+
+            if(!campoLogin.value.isEmail())
+            {
+                alert('O e-mail informado para o login do usuário não possui uma formatação válida');
+                campoLogin.focus();
+                return;
+            }
+            
+            }
+            // se não for transmissão aberta, nem inscrição, vê se o usuário pôs a senha
+            if (eventoAberto != 1 && bInscricao != 1 && campoSenha.value == '') {
+                alert('É preciso preencher a senha.');
+                return;
+            }
+
+            var ret = WCAjax.ExecLogin($get(campoLogin),
+                                       $get(campoSenha),
+                                       $get(campoNome),
+                                       $get(campoEmpresa),
+                                       $get(campoCargo),
+                                       $get(campoCidade),
+                                       $get(campoEstado),
+                                       $get(campoTelefone),
+                                       $get(campoDescricao),
+                                       codTransmissao,
+                                       codConferencia,
+                                       codCliente,
+                                       bInscricao);
+
+            var res = null;
+
+            if (ret.error != null) {
+                alert(ret.error.message);
+
+                trace("najaProcess: " + ret.error.najaProcess);
+                trace("message: " + ret.error.message);
+                trace("type: " + ret.error.type);
+                trace("stackTrace: " + ret.error.stackTrace);
+
+                return;
+            } else {
+                res = ret.value;
+            }
+
+            switch(res.charAt(0))
+            {
+                case '+': //efetuou o login, mas precisa escolher o cliente a ser logado (usuário com mais de um cliente)
+                    $('iframeTemplateLogin').src = 'branco.html';
+                    win.close('winLoginAbertoPadrao');
+                    win.close('winLoginSenhaPadrao');
+                    InitSelecionaCliente();
+                    break;
+
+                case '-': //segue mensagem de erro
+                    alert(res.substring(1));
+                    if(eventoAberto == 1)
+                    {
+                        campoNome.focus();
+                    }
+                    else
+                    {
+                        campoLogin.focus();
+                        campoSenha.value = '';
+                    }
+                    break;
+
+                case '>': //Conferido, vai lá assistir sua transmissão
+                    var pOffset = 0;
+                    try{ pOffset = parseInt(Request.queryString("offset")); }
+                    catch(e) { pOffset = 0; }
+
+                    window.location = window.location.href.substring(0,window.location.href.lastIndexOf('/'))
+                                      + '/visualizador.aspx?CodTransmissao=' + codTransmissao
+                                      + (pOffset>0? '&offset='+pOffset : '');
+                    break;
+
+                case '!': //Conferido, vai lá participar da sua conferência
+                visualizarConfer…
+
+
     function valida(){
-                if(valida_cpf(document.getElementById('WebCastersEmpresa').value))
+                if(valida_cpf(document.getElementById('WebCastersEmpresa').value)){
                     alert('CPF Válido');
-                else
+                }else{
                     alert('CPF Inválido');
+                if(!campoEmpresa.valida()){
+                alert('O CPF não é valido');
+                campoEmpresa.focus();
+                return;
+            }
+          }
             }
             
             function valida_cpf(cpf){
@@ -109,15 +312,6 @@
  }
  }
 
-    function FormataCpf(campo, teclapres)
-	{
-		v=campo.value;
-        v=v.replace(/\D/g,"")                    
-        v=v.replace(/(\d{3})(\d)/,"$1.$2")       
-        v=v.replace(/(\d{3})(\d)/,"$1.$2")                                  
-        v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2") 
-		campo.value=v;
-	}
 
     function toggleLogin() {
         var ds = '';
@@ -169,7 +363,7 @@
     <tr>
         <td align="right" class="titulo111">CPF</td>
         <td align="left">
-            <input type="text" id="WebCastersEmpresa" name="cpf" maxlength="11"></td>
+            <input type="text" id="WebCastersEmpresa" name="cpf" maxlength="11" placeholder="Não coloque ponto nem traço"></td>
             <!--
                 onkeypress="mascara(this, '###.###.###-##')" maxlength="14" placeholder="999.999.999-99"
     <input name="cpf" type="text" id="cpf" maxlength="11" /> 
