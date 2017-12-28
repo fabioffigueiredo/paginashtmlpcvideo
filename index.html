@@ -1,0 +1,149 @@
+<html>
+<head>
+<style type="text/css">
+        body {
+	font-family: arial, helvetica;
+	font-size:18px;
+	background-image:url("login.jpg");
+	background-repeat:no-repeat;
+	background-position:top center;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	margin-left: 50px;
+    	}
+
+
+.titulo {
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+    color: #6D767D;
+}
+
+
+
+#WebCastersLogin, #WebCastersNome, #WebCastersCidade, #WebCastersEmpresa, #WebCasterstelefone , #WebCastersCargo, #selLogin{
+	width: 300px;
+	height: 30px;
+	font-size: 18px;
+	
+}
+
+#WebCastersBtnEntrar {
+	font-size: 16px;
+}
+
+
+.titulo1 {	color: white;
+	font-weight: bold;
+	font-size: 20px;
+    color: #6D767D;
+}
+.titulo11 {color: white;
+	font-weight: bold;
+	font-size: 20px;
+    color: #6D767D;
+}
+.titulo111 {color: white;
+	font-weight: bold;
+	font-size: 20px;
+    color: #6D767D;
+}
+.titulo1111 {color: white;
+	font-weight: bold;
+	font-size: 20px;
+    color: #6D767D;
+}
+</style>
+
+
+<script type="text/javascript">
+	function FormataCpf(campo, teclapres)
+	{
+		v=campo.value;
+        v=v.replace(/\D/g,"")                    
+        v=v.replace(/(\d{3})(\d)/,"$1.$2")       
+        v=v.replace(/(\d{3})(\d)/,"$1.$2")                                  
+        v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2") 
+		campo.value=v;
+	}
+
+    function toggleLogin() {
+        var ds = '';
+        var di = '';
+        if (document.getElementById('WebCastersCargo').selectedIndex == 2) {
+            ds = 'block';
+            di = 'none';
+        } else {
+            ds = 'none';
+            di = 'block';
+        }
+
+        document.getElementById('selLogin').style.display = ds;
+        document.getElementById('WebCastersNome').style.display = di;
+        document.getElementById('labelEmail').style.display = di;
+        document.getElementById('WebCastersLogin').style.display = di;
+        document.getElementById('WebCasterstelefone').style.display = di;
+    }
+
+    function copyLogin() {
+        var index = document.getElementById('selLogin').selectedIndex;
+        var option = document.getElementById('selLogin').options[index];
+        document.getElementById('WebCastersNome').value = option.text;
+        document.getElementById('WebCastersLogin').value = option.value;
+        document.getElementById('WebCasterstelefone').value = option.value;
+        document.getElementById('labelTelefone').value= option.value;
+
+
+    }
+
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Webcast </title>
+</head>
+<body>
+<center>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<table border=0 cellpadding=4 cellspacing=4>
+<tr>
+  <td align=left><table border=0 cellpadding=4 cellspacing=4>
+    <tr>
+      <td align=right class=titulo111><span id="labelNome">Nome<span style="color:red">*</span>:</span></td>
+      <td align=left><input type="text" id="WebCastersNome" /></td>
+    </tr>
+     <tr>
+      <td align=right class=titulo111><span id="labelTelefone">cpf<span style="color:red">*</span>:</span></td>
+      <td align=left><input type="text" id="WebCasterstelefone" /></td>
+    </tr>
+        <td align="right" class="titulo111">CPF</td>
+        <td align="left">
+            <input type="text" id="WebCastersEmpresa"></td>
+    </tr>
+    <tr>
+      <td align=right class=titulo111><span id="labelEmail">E-mail<span style="color:red">*</span>:</span></td>
+      <td align=left><input type="text" id="WebCastersLogin" <span class="titulo1111">
+        <input type="button" id="WebCastersBtnEntrar" value="Entrar" um cadastro />
+        </span></td>
+    </tr>
+   
+      
+    <tr>
+      <td align=right colspan=2 class=titulo111>&nbsp;</td>
+    </tr>
+    <tr>
+      <td align=right colspan=2 class=titulo111 style="font-size:14px;color:red;text-align:center">&nbsp;</td>
+    </tr>
+  </table></td>
+</tr>
+</table>
+<br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br />
+</center>    
+
+
+</body>
+</html>

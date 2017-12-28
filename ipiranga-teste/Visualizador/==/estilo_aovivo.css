@@ -1,0 +1,167 @@
+
+/* ===-----------------------------=== */
+/* ===  A R E A   D O   V I D E O  === */
+/* ===-----------------------------=== */
+
+/* CONTROLES DO VÍDEO */
+
+
+/* Fundo dos controles de vídeo */
+.controleVideo {
+    position:absolute;
+    left:20px; top:383px;
+    width:600px;
+    height:20px;
+    
+    background-repeat:repeat-x;
+    background-image:url(controls_back1.png);
+    cursor:default;
+    
+    z-index:0;
+}
+
+/* Botões para tocar o stream de vídeo (play/pause) */
+#WebCasters_BtnPlay {
+    position:absolute;
+    left:5px; top:2px;
+    width:15px; height:15px;
+    
+    background-repeat:no-repeat;
+    background-image:url(play.png);
+    cursor:pointer;
+}
+#WebCasters_BtnPlay_Sel{
+    position:absolute;
+    left:5px; top:2px;
+    width:15px; height:15px;
+    
+    background-repeat:no-repeat;
+    background-image:url(stop.png);
+    cursor:pointer;
+}
+
+
+/* 
+Área na qual o slider do volume de áudio correrá 
+(o sentido é dado pelo tamanho) */
+#WebCasters_AreaSliderAudio { 
+    position:absolute;
+    left:275px; top:4px;
+    width:71px; height:12px;
+    
+    background-repeat:no-repeat;
+    background-image:url(volume_back.png);
+    background-color:Transparent;
+    
+    overflow:visible;
+}
+
+/*
+Slider que indica o volume do áudio 
+(a posição é definida pela área do slider de audio) */
+#WebCasters_SliderAudio {
+    position:absolute;
+    left:0px; top:0px;
+    width:3px; height:12px;
+    background-repeat:no-repeat;
+    background-image:url(slider_button.png);
+    background-color:Transparent;
+    cursor:pointer;
+}
+
+
+/* Botões para tocar o estado do audio para mudo */
+#WebCasters_BtnMudo {
+    position:absolute;
+    left:260px; top:4px;
+    width:12px; height:12px;
+    background-repeat:no-repeat;
+    background-image:url(sound_on.png);
+    cursor:pointer;
+}
+#WebCasters_BtnMudo_Sel {
+    position:absolute;
+    left:260px; top:4px;
+    width:12px; height:12px;
+    background-repeat:no-repeat;
+    background-image:url(sound_off.png);
+    cursor:pointer;
+}
+
+
+/* Botão para tocar o vídeo em "tela cheia" */
+#WebCasters_BtnTelaCheia {
+    position:absolute;
+    left:350px; top:3px;
+    
+    width:15px; height:15px;
+    background-repeat:no-repeat;
+    background-image:url(full.png);
+    background-color:Transparent;
+    cursor:pointer;
+}
+
+
+/* caixa de texto que exibe informações do vídeo */
+#WebCasters_Informacao {
+    position:absolute; 
+    left:25px;   top:3px;
+    width:228px; height:14px;
+    
+    /* background: #FFF; */
+    overflow:hidden;
+    
+    font-family: sans-serif;
+    font-size:11px;
+    text-align:center;
+    color: #787878;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===---------------------------=== */
+/* ===  A R E A   2              === */
+/* ===---------------------------=== */
+
+
+/* 
+Botões para exibir a área de interacao multimidia */
+#WebCasters_InteracaoMultimidia_Btn, #WebCasters_InteracaoMultimidia_Btn_Sel {
+	position:absolute;
+	top:408px; left:86px;
+	display: none;
+}
+
+
+ 
+/*
+Botões para exibir a área de chat */
+#WebCasters_Chat_Btn, #WebCasters_Chat_Btn_Sel {
+    position:absolute;
+    top:408px; left: 19px;
+    
+}
+
+/* 
+areas chat e interacaoMultimidia */
+#WebCasters_InteracaoMultimidia_Area, #WebCasters_Chat_Area {
+	position:absolute;
+    left:630px; top:150px;
+    width:364px; height:360px;
+}
+
+
+
+

@@ -1,0 +1,213 @@
+﻿/* ===------------------------------=== */
+/* ===  L I S T A   E N Q U E T E   === */
+/* ===------------------------------=== */
+
+
+.WebCasters_ListaEnquetes_Titulo {
+	font-size:16px;
+	font-weight: bold;
+	margin-bottom:10px;
+}
+
+.WebCasters_ListaEnquetes_item {
+	margin-bottom:7px;
+	margin-left:10px;
+	font-size:14px;
+	font-weight:normal;
+	text-decoration:none;
+	color:#000000;
+	cursor:pointer;
+}   
+
+.WebCasters_Enquete_SemEnquetes {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#WebCasters_AguardandoEnquetes {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	display: none;
+}
+
+
+
+
+
+/*
+	====================================
+	*** ESTILO PARA PÁGINA DE ENQUETES ***
+	====================================
+*/
+
+
+
+
+/* 
+	*** ESTILO DO CORPO DA PÁGINA ***
+*/
+
+#WebCasters_Enquete_ContainerFormulario { 
+	font-family: sans-serif;
+	font-size:12px;
+	overflow-y: scroll;
+	width: 430px;
+	height: 340px;
+	margin-left: -10px;
+	background-color:inherit;
+}
+
+.WebCasters_Enquete_Formulario {
+	margin-bottom: 20px;
+	background-color:#FFFFFF;
+	clear:both;
+	border:solid 1px #000000;
+}
+
+
+/*  *** ESTILO PARA LINHAS ***  */
+DIV.WebCasters_Enquete_Linha {
+	margin-bottom: 5px;
+}
+
+
+
+/* *** ESTILO DO TITULO *** */
+DIV.WebCasters_Enquete_Titulo {
+	font-family: sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	
+	background-color: #808080;
+	color: #FFFFFF;
+	
+	margin-bottom: 7px;
+	
+	padding: 5px;
+}
+
+
+
+/* *** ESTILO PARA LINHA DE PERGUNTA *** */
+DIV.WebCasters_Enquete_Pergunta {
+	margin-top: 13px;
+	font-weight: bold;
+	
+	border-bottom: 1px solid #DDDDDD;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+
+/* *** ESTILO PARA LINHA DE RESPOSTA *** */
+DIV.WebCasters_Enquete_Resposta {
+	margin-top:7px;
+	padding-left:30px;
+	
+}
+
+
+/* *** ESTILO PARA CAIXA DE TEXTO DE MÚLTIPLAS LINHAS *** */
+TEXTAREA.WebCasters_Enquete_Pergunta_Livre {
+	
+}
+
+
+/* *** ESTILO PARA CAIXA DE TEXTO DE ÚNICA LINHA *** */
+INPUT.WebCasters_Enquete_Pergunta_Livre {
+	
+}
+
+
+
+/* *** ESTILO PARA LINHA DO BOTÃO DE ENVIAR *** */
+DIV.WebCasters_Enquete_LinhaBotoes {
+	margin-top: 20px;
+	border-top: 1px solid #FFFFFF;
+	text-align: right;
+	padding-right: 5px;
+}
+
+/* *** ESTILO DO BOTÃO ENVIAR *** */
+INPUT.WebCasters_Enquete_BotaoEnviar {
+	margin-top:5px;
+	margin-bottom: 5px;
+	
+	background-color: #888888;
+	color: #FFFFFF;
+
+	cursor: pointer;
+}
+
+INPUT.WebCasters_Enquete_BotaoFechar {
+	margin-top:5px;
+	margin-left: 5px;
+	float:left;
+	
+	background-color: #888888;
+	color: #FFFFFF;
+
+	cursor: pointer;	
+}
+
+
+/* *** ESTILO PARA LINHAS DE MENSAGEM *** */
+DIV.WebCasters_Enquete_Mensagem {
+	font-weight: bold;
+	
+	font-size:medium;
+	
+	margin: 5px;
+	padding: 3px;
+}
+
+
+
+DIV.WebCasters_Enquete_RespostaSelecionada {
+	font-weight:bold;
+}
+
+/* *** ESTILO PARA LINHAS DAS RESPOSTAS CORRETAS *** */
+DIV.WebCasters_Enquete_RespostaCorreta {
+	border: 2px solid #00DD00;
+	color: #005500;
+}
+
+
+/* *** ESTILO PARA O 'FUNDO' DA BARRA DE PORCENTAGEM *** */
+DIV.WebCasters_Enquete_BarraPorcentagem_Fundo {
+	height: 17px;
+	width: 200px;
+	background-color:#CCCCCC; 
+	
+	margin:3px; 
+	margin-bottom:5px;
+	
+	border-top: 1px solid #808080;
+	border-left: 1px solid #808080;
+	
+	border-right: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	
+	color: #444444;
+	text-align:center;
+	font-weight:normal;
+	
+	overflow:hidden;
+}
+
+/* *** ESTILO PARA A 'FRENTE' DA BARRA DE PORCENTAGEM *** */
+DIV.WebCasters_Enquete_BarraPorcentagem_Frente {
+	background: #606060;
+	
+	height:17px;
+	width:1%; 
+	float:left; 
+	
+	color: #FFFFFF;
+	text-align:center;
+}

@@ -1,0 +1,219 @@
+<!-- 
+
+    === INSTRU��ES GERAIS ===
+    
+    Este template cont�m instru��es para realizar customiza��es no visualizador.
+    
+    Para alter�-lo � necess�rio ter conhecimentos de HTML e CSS. Recomenda-se 
+que as modifica��es sigam o padr�o W3C para que haja compatibilidade entre os
+diversos navegadores.
+    
+    No processamento do template, o visualizador orienta-se pelos IDs dos
+elementos. Portanto, mantenha-os inalterados, pois as identifica��es 
+indevidamente modificadas tornam-se automaticamente inutilizadas.
+    
+    O template pode ser recriado do zero. Neste caso, os IDs das �reas dever�o 
+ser definidas apropriadamente para o correto funcionamento.
+    
+    Recomenda-se que a apar�ncia (estilo/layout) seja totalmente definida em
+Cascading Style Sheet.
+
+    
+    === INTRU��ES PARA USO DE �REAS ===
+
+-->
+
+<!--   V I S U A L I Z A D O R   A O   V I V O  -->
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <!-- O t�tulo da janela ser� o nome do cliente caso deixe a tag t�tulo em branco,
+         caso contr�rio o t�tulo ser� o que preencher na tag -->
+    <title></title>
+    
+    
+    <!-- A T E N � � O : o layout deste visualizador est� contido nos arquivos seguintes -->
+    <link rel="stylesheet" type="text/css" href="estilo_comum.css" />
+    <link rel="stylesheet" type="text/css" href="estilo_aovivo.css" />
+
+    <link rel="stylesheet" type="text/css" href="estilo_enquete.css" />
+</head>
+
+
+<!-- *Se uma imagem de fundo for definida aqui "background-image:url()" ela ser� utilizada 
+     no lugar da imagem do padr�o de transmiss�o, caso contr�rio a imagem do padr�o de 
+     transmiss�o ser� utilizada 
+     *A cor de fundo ser� definida no padr�o de transmiss�o
+     *O tamanho do body definir� o tamanho da janela de visualizador que ser� aberta-->
+<body>
+        
+    <!-- Esse elemento exibir� o t�tulo da transmiss�o 
+         *A cor ser� definida no padr�o de transmiss�o -->
+   <div id="banner"><img src="banner1.png"</div>
+<div> <p> </p>
+</div>
+
+
+
+ 
+ 
+     
+     
+     
+     
+   <!-- <div class="FundoAreaVideo">
+     *** VIDEO E CONTROLES ***  
+ 
+    <!-- �rea do v�deo - deve-se definir a posi��o e tamanho do v�deo no visualizador --><!-- controleVideo 
+ 
+ 
+</div> -->
+     
+
+<div id="WebCasters_AreaVideo"></div>
+ 
+ 
+
+    <!-- *** BANNERS *** -->
+
+    <!-- Nesse div ser� carregada a imagem de banner e o link definidos
+         no padr�o de transmiss�o
+<div id="WebCasters_Banner_1" class="banner"></div> 
+    
+    <!-- Nesse div ser� carregada a imagem de banner e o link definidos
+         no padr�o de transmiss�o
+    <div id="WebCasters_Banner_2" class="banner"></div> 
+    
+	<!-- Nesse div ser� carregada a imagem de banner e o link definidos
+         no padr�o de transmiss�o
+<div id="WebCasters_Banner_3" class="banner"></div>
+    
+	
+	
+    
+    
+    
+    
+    <!-- *** AREA 1 *** -->
+    
+    
+<div id="WebCasters_Area1_Fundo">     
+                
+  <div class="detalheArea1"></div>
+                
+                <!-- �rea na qual ser�o apresentados os slides -->
+ <!-- <div id="WebCasters_Slides_Area"
+                    class="area area1"
+                    agrupamento="AreaConteudo1"
+                    slideProporcional="true"></div>	-->
+                <!-- Bot�es para exibir a �rea de slides -->
+<!-- <div id="WebCasters_Slides_Btn" 
+                    class="aba">Slides</div>	        
+                <div id="WebCasters_Slides_Btn_Sel" 
+                    class="abaSelecionada">Slides</div> 
+            
+            
+                                   
+  <!-- �rea na qual ser�o apresentadas as informa��es da transmiss�o 
+  <div id="WebCasters_InfoTransmissao_Area"
+                    class="area area1"
+                    agrupamento="AreaConteudo1"></div>	
+                <!-- Bot�es para exibir a �rea de informa��es da transmiss�o 
+                <div id="WebCasters_InfoTransmissao_Btn" 
+                    class="aba">Ficha T&eacute;cnica</div>	        
+                <div id="WebCasters_InfoTransmissao_Btn_Sel" 
+                    class="abaSelecionada">Ficha T&eacute;cnica</div>
+                        
+                
+                        
+                <!-- �rea na qual ser�o apresentadas as enquetes -->
+  <!--<div id="WebCasters_Enquetes_Area"
+                    class="area area1"
+                    agrupamento="AreaConteudo1"></div>	
+  <!-- Bot�es para exibir a �rea de enquetes --> 
+  <!-- <div id="WebCasters_Enquetes_Btn" 
+                    class="aba">Enquete</div>	        
+  <div id="WebCasters_Enquetes_Btn_Sel" 
+                    class="abaSelecionada">Enquete</div> --> 	 
+                                       
+                                
+                <!-- �rea na qual ser�o carregas as informa��es de ajuda
+                     Se n�o houver conte�do no div da �rea, carrega as informa��es de ajuda
+                     padr�es da webcasters
+                <div id="WebCasters_Ajuda_Area"
+                    class="area area1"
+                    agrupamento="AreaConteudo1"></div>	
+                <!-- Bot�es para exibir a �rea de enquetes 
+<div id="WebCasters_Ajuda_Btn" 
+                    class="aba">?</div>
+                <div id="WebCasters_Ajuda_Btn_Sel" 
+                    class="abaSelecionada">?</div> -->
+                        
+</div>
+        
+    
+<!-- *** AREA 2 *** -->
+
+  
+            
+<!-- �rea na qual ser� carregada a estrutura do chat 
+                     *Se a transmiss�o tiver a op��o "sem chat" essa estrutura
+                     ficar� invis�vel-->
+                <div id="WebCasters_Chat_Area"
+                    class="area"
+                    agrupamento="AreaConteudo2"selecionado>
+                        
+                         <!-- As mensagens do chat aparecer�o aqui -->
+                         <div id="WebCasters_Chat_Mensagens">Mensagens do chat</div>
+                        
+                        <!-- Caixa de entrada onde o usu�rio escrever� a mensagem 
+                             que deseja enviar no chat -->
+            <textarea name="WebCasters_Chat_Entrada" rows="2" id="WebCasters_Chat_Entrada"></textarea>
+                                
+                        <!-- Bot�o para enviar a mensagem do chat -->
+                  <div id="WebCasters_Chat_BtnEnviar">Enviar</div>     
+                        
+                <!-- Fim da �rea do chat -->       
+</div>
+                    
+                <!-- Bot�es para exibir a �rea de chat -->
+
+<!-- �rea na qual ocorrer� a itera��o multim�dia
+         *Caso a transmiss�o n�o tenha essa op��o a itera��o 
+         multim�dia n�o aparecer� -->
+         
+          <div class="blocoArquivos"> 
+  <!-- �rea na qual ser�o listados os arquivos auxiliares -->
+                         
+  <!--<div id="WebCasters_ArquivosAuxiliares_Area"
+        class="area2"
+        agrupamento="AreaConteudo3" selecionado="selecionado"></div>	
+                <!-- Bot�es para exibir a �rea de arquivos auxiliares 
+  <div id="WebCasters_ArquivosAuxiliares_Btn" 
+                    class="aba">Material Extra</div>
+                <div id="WebCasters_ArquivosAuxiliares_Btn_Sel" 
+                    class="abaSelecionada">Material Extra</div> -->
+                      
+ </div>               
+         
+<div id="WebCasters_InteracaoMultimidia_Area"
+    	class="area"
+    	agrupamento="AreaConteudo2"></div>	
+    <!-- Bot�es para exibir a �rea de intera��o multimia -->
+<div style="display:visible;">
+    
+    
+    
+    
+  <!-- *** CREDITOS *** -->
+            
+  <!-- Essa �rea ficar� vis�vel quando a transmiss�o consumir cr�ditos 
+         e invis�vel quando a transmiss�o n�o consumir --><!-- *** CONFIGURACOES *** -->
+    
+  <!-- �rea para conter os elementos de configura��o do visualizador e da transmiss�o --><!-- Bot�es para exibir a �rea de configura��o --></div>
+        
+        
+        
+        
+</body>
+</html>

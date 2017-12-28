@@ -1,0 +1,364 @@
+/* ===-----------------------------=== */
+/* ===  A R E A   D O   V I D E O  === */
+/* ===-----------------------------=== */
+
+/* CONTROLES DO VÍDEO */
+
+
+/* Fundo dos controles de vídeo */
+.controleVideo {
+	position:absolute;
+	left:-14px;
+	top:220px;
+	width:413px;
+	height:30px;
+	cursor:default;
+	z-index:0;
+}
+
+
+
+
+/*
+Nesse elemento aparecerá o relógio com o tempo do vídeo decorrido e total */
+#WebCasters_RelogioVideo{
+	position:absolute;
+	left:267px;
+	top:9px;
+	width:106px;
+	height:15px;
+	overflow:hidden;
+	font-family: sans-serif;
+	font-size: 12px;
+	text-align:center;
+	color:#585858;
+
+}
+
+
+/*
+Área na qual o slider do vídeo correrá (o sentido é dado pelo tamanho) */
+#WebCasters_AreaSliderVideo{
+	position:absolute;
+	left:26px;
+	top:12px;
+	width:229px;
+	height:11px;
+	background-color:Transparent;
+	overflow:visible;
+	background-color:Transparent;
+	z-index:999;
+
+}
+.ImagemAreaSliderVideo{
+	position:absolute;
+	left:48px;
+	top:11px;
+	width:94px;
+	height:12px;
+	background-color:Transparent;
+	overflow:visible;
+	background-repeat:repeat-x;
+	background-image:url(SliderVideo.png);
+	background-color:Transparent;
+	z-index:999;
+}
+/*
+Slider que indica o tempo do vídeo (a posição é definida pela área do slider de vídeo)*/
+#WebCasters_SliderVideo{ 
+	position:absolute;
+	left:0px; top:-3px;
+    width:15px; height:15px;
+    
+    background-repeat:no-repeat;
+    background-image:url(Slider.png);
+    background-color:Transparent;
+    
+	cursor:pointer;
+}
+
+
+
+
+
+
+
+/*
+Botão para retroceder um minuto do vídeo */
+#WebCasters_BtnRetroceder{ 
+	position:absolute;
+    left:10px; top:21px;
+    width:15px; height:15px;
+    
+    background-repeat:no-repeat;
+    background-image:url(frw.png);
+    cursor:pointer;
+
+}
+
+/*
+Botões para tocar o stream de vídeo (play/pause) */
+#WebCasters_BtnPlay {
+	position:absolute;
+	left:3px;
+	top:6px;
+	width:17px;
+	height:19px;
+	background-repeat:no-repeat;
+	background-image:url(play.png);
+	cursor:pointer;
+}
+#WebCasters_BtnPlay_Sel{
+	position:absolute;
+	left:5px;
+	top:8px;
+	width:15px;
+	height:16px;
+	background-repeat:no-repeat;
+	background-image:url(stop.png);
+	cursor:pointer;
+}
+
+/*
+Botão para adiantar um minuto do vídeo */
+#WebCasters_BtnAdiantar{ 
+	position:absolute;
+    left:50px; top:21px;
+    width:15px; height:15px;
+    
+    background-repeat:no-repeat;
+    background-image:url(ff.png);
+    cursor:pointer;
+
+}
+
+
+
+
+
+/*
+Nesse elemento aparecerão algumas informações referente a conexão e ao ajuste de volume */
+#WebCasters_Informacao{ 
+    position:absolute; 
+    left:70px;   top:22px;
+    width:125px; height:15px;
+    
+    overflow:hidden;
+    
+    font-family: sans-serif;
+    font-size:11px;
+    text-align:center;
+    color: #787878;
+    
+    /*background: #CFC;*/
+}
+
+
+
+
+/*
+Botão para deixar o vídeo em tela cheia */
+#WebCasters_BtnTelaCheia{
+	position:absolute;
+	left:385px;
+	top:3px;
+	width:24px;
+	height:24px;
+	background-repeat:no-repeat;
+	background-image:url(full.png);
+	background-color:Transparent;
+	cursor:pointer;
+}
+
+
+
+
+/* ===----------------------------------------------------------=== */
+/* ===  Í N D I C E S   T R A N S M I S S Ã O   A R Q U I V O   === */
+/* ===----------------------------------------------------------=== */
+
+
+.WebCastersIndiceArquivo {
+	color: #808080;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top:3px;
+	font-weight:normal;
+	cursor: pointer;
+}
+.WebCastersIndiceArquivoSelecionado {
+	color: #000000;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top:3px;
+	font-weight:bold;
+	cursor: pointer;
+}
+
+
+.WebCastersSubIndiceArquivo {
+	color: #808080;
+	padding-left: 15px;
+	padding-right: 5px;
+	font-weight:normal;
+	cursor: pointer;
+}
+.WebCastersSubIndiceArquivoSelecionado {
+	color: #000000;
+	padding-left: 15px;
+	padding-right: 5px;
+	font-weight:bold;
+	cursor: pointer;
+}
+
+
+
+/* ===---------------------------=== */
+/* ===  A R E A   2              === */
+/* ===---------------------------=== */
+
+
+
+#WebCasters_Indices_Area, #WebCasters_ReverChat_Area{
+	position: absolute;
+	left: 16px;
+	top: 449px;
+	width: 544px;
+	height: 180px;
+	overflow: auto;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #cccccc;
+	
+}
+
+#WebCasters_Duvidas_Area{
+	position: absolute;
+	left: 23px;
+	top: 457px;
+	width: 530px;
+	height: 164px;
+	overflow: auto;
+	background-color: #eaeaea;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #cccccc;
+	
+}
+
+/*
+Botões para exibir a área dos índices */
+#WebCasters_Indices_Btn {
+	position: absolute;
+	left: 25px;
+	top: 426px;
+	width: 56px;
+	height: 16px;
+	display: inherit;
+}	        
+#WebCasters_Indices_Btn_Sel {
+	position: absolute;
+	left: 25px;
+	top: 426px;
+	width: 56px;
+	height: 16px;
+	display: inherit;
+	background-color: #055894;
+} 
+        
+        
+/*
+Botões para exibir a área de rever chat*/
+#WebCasters_ReverChat_Btn {
+	position: absolute;
+	left: 97px;
+	top: 426px;
+	width: 69px;
+	height: 16px;
+	
+}	        
+#WebCasters_ReverChat_Btn_Sel {
+	position: absolute;
+	left: 97px;
+	top: 426px;
+	width: 69px;
+	height: 16px;
+	background-color: #055894;
+	
+}             
+
+
+
+        
+#WebCasters_Duvidas_Entrada{
+	position: absolute;
+	left: 7px;
+	top: 11px;
+	width: 515px;
+	height: 90px;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #b5b5b5;
+	background-color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	font-weight: normal;
+	text-align: left;
+	color: #000000;
+}
+                
+
+/*
+Botão para enviar a dúvida do usuário */
+#WebCasters_Duvidas_BtnEnviar {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background-color: #F5F5F5;
+	background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+	background-repeat: repeat-x;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #A2A2A2;
+	border-image: none;
+	border-radius: 4px 4px 4px 4px;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+	color: #333333;
+	cursor: pointer;
+	display: inherit;
+	font-size: 14px;
+	height: 21px;
+	left: 445px;
+	line-height: 20px;
+	margin-bottom: 0;
+	padding: 4px 12px;
+	position: absolute;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	top: 109px;
+	vertical-align: middle;
+	width: 50px;
+	cursor: pointer;
+}     
+
+/*
+Botões para exibir a área de dúvidas */
+#WebCasters_Duvidas_Btn {
+	position: absolute;
+	left: 323px;
+	top: 425px;
+	width: 54px;
+	height: 16px;
+	display: inherit;
+}	        
+#WebCasters_Duvidas_Btn_Sel {
+	position: absolute;
+	left: 323px;
+	top: 425px;
+	width: 54px;
+	height: 16px;
+	display: inherit;
+	background-color: #055894;
+} 
