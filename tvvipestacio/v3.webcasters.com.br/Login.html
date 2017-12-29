@@ -1,0 +1,500 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from v3.webcasters.com.br/Login.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Dec 2017 12:59:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="Head1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"7bd738cd33","applicationID":"32169259","transactionName":"M1IHNktWDUpTU0JZXQoYJDFpGA9WVVlYHlMXRx0=","queueTime":0,"applicationTime":5,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<script type="text/javascript" src="NajaNET/Naja_System%2cv1.2.1.31739.js"></script>
+<script type="text/javascript" src="NajaNET/Naja_System.Methods%2cv1.2.1.31739.20171229105913.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><title>
+	
+        &nbsp;Login&nbsp;
+</title>
+    <style type="text/css">
+        @import url("css/estilo_ajax.css");
+    </style>
+    <script language="javascript" type="text/javascript">
+        Page.loadNamespace('System.Data',
+                         'System.Page.HttpContext',
+                         'System.Page.UI.Dragger');
+    </script>
+</head>
+
+<body id="BodyPaginaLogin" onload="initPaginaLogin()">
+
+    <script src="Bundles/PublicadorLibad01?v=z_2Va0Ug6x6OsN_VzOPZhbB3jdks8Zs9Z_eT6aWBBL81"></script>
+
+    <script src="Bundles/tools99a0?v=upTSJpg88iyzXkt3FPObkL-btg_1JmYQVnyIwYzhyXA1"></script>
+
+    <script src="Bundles/SelecionaClientee9a3?v=_yYmt599GUEZ3dnYdgJrD6C6uivBEGnp6ByLvfRbIt81"></script>
+
+    <script src="Bundles/VisualizarConferencias2a97?v=kzSozRXKYIduZ-HDIt8HCaIQgw5oQ8IX1awxLcaC5Bk1"></script>
+
+
+    <div style="bottom: 0; position: fixed; background-color: #000000; color: #c3c3c3; width: 100%; font-size: 10px; height: 20px; font-family: Verdana, Arial, Sans-Serif; line-height: 18px">
+        <span>(v) 6.6.5 - (h) VD-VM-WCS-004</span>
+    </div>
+
+    <script language="javascript1.1" type="text/javascript">
+
+        var pathSite = 'index.html';
+        var win = new Window();
+        var codTransmissao = 0;
+    var codConferencia = 0;
+        var codCliente = 0;
+        var eventoAberto = 0;
+        var bInscricao = 0;
+
+        if(bInscricao == 1)
+        {
+            eventoAberto = 1;
+        }
+
+        win.create('winLoginSenhaPadrao', 'Login', 207, 323,  false, true, false);
+        win.insertHtml('winLoginSenhaPadrao', HtmlLoginSenhaPadrao);
+
+        win.create('winLoginAbertoPadrao', 'Login', 207, 323,  false, true, false);
+        win.insertHtml('winLoginAbertoPadrao', HtmlLoginAbertoPadrao);
+
+        function initPaginaLogin()
+        {
+
+	InitLoginPadrao();
+
+        PegaObjetos();
+
+        //verifica a mensagem de erro
+        msgErro = '';
+    if(msgErro.length > 0)
+    {
+        alert(msgErro);
+    }
+
+        // campoLogin.focus(); // acha-se que o tab está desordenado
+}
+
+Campo = Type.classCreate();
+Campo.prototype = {
+    initialize: function()
+    {
+        this.value = '';
+        this.disabled = true;
+        this.focus = function(){};
+    }
+}
+
+var campoLogin = new Campo();
+var campoSenha = new Campo();
+var campoNome = new Campo();
+var campoEmpresa = new Campo();
+var campoCargo = new Campo();
+var campoCidade = new Campo();
+var campoEstado = new Campo();
+var campoTelefone = new Campo();
+var campoDescricao = new Campo();
+
+function PegaObjetos()
+{
+
+    //Preenche as informações do evento
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoNome') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoNome').innerHTML = ''; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoDescricao') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoDescricao').innerHTML = ''; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoDataInicio') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoDataInicio').innerHTML = ''; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoHoraInicio') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoHoraInicio').innerHTML = ''; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoDataFim') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoDataFim').innerHTML = ''; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoHoraFim') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoHoraFim').innerHTML = ''; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersIPUsuario') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersIPUsuario').innerHTML = '172.31.33.211'; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersHostName') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersHostName').innerHTML = '172.31.33.211'; }
+
+    //Associa os campos com os objetos javascript
+    if(eventoAberto == 1)
+    { if($('txt_loginabertopadrao') != null) { campoLogin = $('txt_loginabertopadrao'); } }
+    else
+    { if($('txt_loginsenhapadrao') != null) { campoLogin = $('txt_loginsenhapadrao'); } }
+    if(iframeTemplateLogin.document.getElementById('WebCastersLogin') != null)
+    {
+        campoLogin = iframeTemplateLogin.document.getElementById('WebCastersLogin');
+    }
+
+    if($('txt_senha') != null) { campoSenha = $('txt_senha'); }
+    if(iframeTemplateLogin.document.getElementById('WebCastersSenha') != null)
+    {
+        campoSenha = iframeTemplateLogin.document.getElementById('WebCastersSenha');
+        //simpleAddEvent(campoLogin,'keypress',function(){executaLoginOnKeyPress(event);} );
+    }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersBtnEntrar') != null)
+    {
+        simpleAddEvent(iframeTemplateLogin.document.getElementById('WebCastersBtnEntrar'),'click',executaLogin);
+    }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersLinkAcesso') != null)
+    {
+        try {
+
+            var endereco = "/Login.aspx"
+                + "?CodTransmissao=" + codTransmissao
+                + "&loginexterno=" +  iframeTemplateLogin.document.getElementById('WebCastersLogin').value
+                + "&senhaexterno=" + iframeTemplateLogin.document.getElementById('WebCastersSenha').value
+            iframeTemplateLogin.document.getElementById('WebCastersLinkAcesso').href = endereco;
+        } catch (e) {}
+    }
+
+    if($('txt_nome') != null) { campoNome = $('txt_nome'); }
+    if(iframeTemplateLogin.document.getElementById('WebCastersNome') != null)
+    { campoNome = iframeTemplateLogin.document.getElementById('WebCastersNome');}
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEmpresa') != null)
+    { campoEmpresa = iframeTemplateLogin.document.getElementById('WebCastersEmpresa'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersCargo') != null)
+    { campoCargo = iframeTemplateLogin.document.getElementById('WebCastersCargo'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersCidade') != null)
+    { campoCidade = iframeTemplateLogin.document.getElementById('WebCastersCidade'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEstado') != null)
+    { campoEstado = iframeTemplateLogin.document.getElementById('WebCastersEstado'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersTelefone') != null)
+    { campoTelefone = iframeTemplateLogin.document.getElementById('WebCastersTelefone'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersDescricao') != null)
+    { campoDescricao = iframeTemplateLogin.document.getElementById('WebCastersDescricao'); }
+
+    // lê o título do template
+    if (iframeTemplateLogin.document.title.trim() != '') {
+        document.title = iframeTemplateLogin.document.title;
+    }
+}
+
+        function InitSelecionaCliente()
+        {
+            win.create('winSelecionaCliente', 'SelecionaCliente', 173, 323, false, true, false);
+            win.insertHtml('winSelecionaCliente', HtmlSelecionaCliente);
+            AbrirSelecionaClientes();
+        }
+
+        function InitLoginPadrao()
+        {
+            if(eventoAberto == 1)
+            {
+                InitLoginAbertoPadrao();
+            }
+            else
+            {
+                InitLoginSenhaPadrao();
+            }
+        }
+
+        function executaLogin()
+        {
+
+            //faz um trim no login para o caso do camarada ter vacilado na hora de colar o e-mail
+            campoLogin.value = campoLogin.value.trim();
+
+            if(!campoLogin.value.isEmail())
+            {
+                alert('O e-mail informado para o login do usuário não possui uma formatação válida');
+                campoLogin.focus();
+                return;
+            }
+
+            // se não for transmissão aberta, nem inscrição, vê se o usuário pôs a senha
+            if (eventoAberto != 1 && bInscricao != 1 && campoSenha.value == '') {
+                alert('É preciso preencher a senha.');
+                return;
+            }
+
+            var ret = WCAjax.ExecLogin($get(campoLogin),
+                                       $get(campoSenha),
+                                       $get(campoNome),
+                                       $get(campoEmpresa),
+                                       $get(campoCargo),
+                                       $get(campoCidade),
+                                       $get(campoEstado),
+                                       $get(campoTelefone),
+                                       $get(campoDescricao),
+                                       codTransmissao,
+                                       codConferencia,
+                                       codCliente,
+                                       bInscricao);
+
+            var res = null;
+
+            if (ret.error != null) {
+                alert(ret.error.message);
+
+                trace("najaProcess: " + ret.error.najaProcess);
+                trace("message: " + ret.error.message);
+                trace("type: " + ret.error.type);
+                trace("stackTrace: " + ret.error.stackTrace);
+
+                return;
+            } else {
+                res = ret.value;
+            }
+
+            switch(res.charAt(0))
+            {
+                case '+': //efetuou o login, mas precisa escolher o cliente a ser logado (usuário com mais de um cliente)
+                    $('iframeTemplateLogin').src = 'branco.html';
+                    win.close('winLoginAbertoPadrao');
+                    win.close('winLoginSenhaPadrao');
+                    InitSelecionaCliente();
+                    break;
+
+                case '-': //segue mensagem de erro
+                    alert(res.substring(1));
+                    if(eventoAberto == 1)
+                    {
+                        campoNome.focus();
+                    }
+                    else
+                    {
+                        campoLogin.focus();
+                        campoSenha.value = '';
+                    }
+                    break;
+
+                case '>': //Conferido, vai lá assistir sua transmissão
+                    var pOffset = 0;
+                    try{ pOffset = parseInt(Request.queryString("offset")); }
+                    catch(e) { pOffset = 0; }
+
+                    window.location = window.location.href.substring(0,window.location.href.lastIndexOf('index.html'))
+                                      + '/visualizador.aspx?CodTransmissao=' + codTransmissao
+                                      + (pOffset>0? '&offset='+pOffset : '');
+                    break;
+
+                case '!': //Conferido, vai lá participar da sua conferência
+                    visualizarConferenciaAssistir(codConferencia);
+                    break;
+
+                case '*': //Ok, pode ir para a área administrativa
+                    if (Request.queryString("ForcaTransmissao"))
+                    {
+                        // gambiarra para o caso do usuário não entrar
+                        // com url logada, mas entrar com ForcaTransmissao
+                        window.location = window.location + "&loginexterno=" + $get(campoLogin) + "&senhaexterno=" + $get(campoSenha);
+                    }
+                    else if (Request.queryString("CodTransmissao") == "0")
+                    {
+                        window.location = "Login.html";
+                    }
+                    else
+                    {
+                        window.location = window.location.href.substring(0,window.location.href.lastIndexOf('index.html')) + '/Admin.aspx';
+                    }
+                    break;
+
+                case '<': //Hey, seu login já existe e precisa de uma senha para entrar, confirme aí.
+                    alert(res.substring(1));
+                    win.close('winLoginAbertoPadrao');
+                    win.close('winLoginSenhaPadrao');
+
+                    campoLogin.disabled = true;
+                    campoSenha.disabled = true;
+                    campoNome.disabled = true;
+                    campoEmpresa.disabled = true;
+                    campoCargo.disabled = true;
+                    campoCidade.disabled = true;
+                    campoEstado.disabled = true;
+                    campoTelefone.disabled = true;
+                    campoDescricao.disabled = true;
+
+                    if(iframeTemplateLogin.document.getElementById('WebCastersBtnEntrar') != null)
+                    { iframeTemplateLogin.document.getElementById('WebCastersBtnEntrar').disabled = true; }
+                    if(iframeTemplateLogin.document.getElementById('WebCastersImgEntrar') != null)
+                    {
+                        iframeTemplateLogin.document.getElementById('WebCastersImgEntrar').onclick = '';
+                        iframeTemplateLogin.document.getElementById('WebCastersImgEntrar').style.cursor = '';
+                    }
+
+                    eventoAberto = 0;
+                    InitLoginSenhaPadrao();
+                    var logOld = campoLogin.value;
+
+                    campoLogin = $('txt_loginsenhapadrao');
+                    campoLogin.value = logOld;
+                    campoSenha = $('txt_senha');
+                    campoSenha.focus();
+                    break;
+
+                case '=': //segue mensagem sobre a inscrição para a transmissão
+                    win.close('winLoginAbertoPadrao');
+                    win.close('winLoginSenhaPadrao');
+
+                    pagLogin = $('BodyPaginaLogin');
+                    var sb = new StringBuilder();
+
+                    sb.append('<table border=0 style=height:100%;width:100%;><tr><td align=center valign=middle>');
+
+                    sb.append('<table align=center border=0 width=70%> <tr><td align=right>');
+                    sb.append('<hr />');
+                    sb.append('<h3 align=center>');
+                    sb.append(res.substring(1));
+                    sb.append('</h3>');
+                    sb.append('<a href=# onclick="window.close();" style=font-size:11px>f e c h a r</a>&nbsp;&nbsp;');
+                    sb.append('<hr />');
+                    sb.append('</td></tr></table>');
+
+                    sb.append('<br /><br /> </td></tr></table>');
+
+                    pagLogin.innerHTML = sb.toString();
+                    break;
+            }
+        }
+
+        function InitLoginSenhaPadrao()
+        {
+            win.open('winLoginSenhaPadrao.html', true);
+            $('txt_loginsenhapadrao').focus();
+        }
+
+        function HtmlLoginSenhaPadrao()
+        {
+            var sb = new StringBuilder();
+            sb.append('<table cellpadding=0 cellspacing=0 style=font-size:10px;font-family:tahoma;>');
+            sb.append(' <tr>');
+            sb.append('   <td valign=top>');
+            sb.append('     <table cellpadding=0 cellspacing=0 width=100% bgcolor=#CCCCCC>');
+            sb.append('       <tr>');
+            sb.append('        <td colspan=2><img src=images/login_top.gif border=0></td>');
+            sb.append('       </tr>');
+            sb.append('     </table>');
+            sb.append('   </td>');
+            sb.append(' </tr>');
+            sb.append(' <tr>');
+            sb.append('   <td bgcolor=#CCCCCC>');
+            sb.append('     <table>');
+            sb.append('       <tr>');
+            sb.append('         <td height=10px></td>');
+            sb.append('       </tr>');
+            sb.append('     </table>');
+            sb.append('     <table width=100% height=100% style=font-size:10px;font-family:tahoma;>');
+            sb.append('       <tr>');
+            sb.append('         <td align=right width=75px>');
+            sb.append('           Usuário:');
+            sb.append('         </td>');
+            sb.append('         <td>');
+            sb.append('           <input type=text maxlength=128 id=txt_loginsenhapadrao value="" style="margin:0px 0px 0px 0px;padding:5px;padding-left:22px;height:12px;background-repeat:no-repeat;background-color:#ffffff;background-image:url(images/lg_usr.gif);border:0px;font-size:10px;width:140px;font-family:tahoma;">');
+            sb.append('         </td>');
+            sb.append('       </tr>');
+            sb.append('       <tr>');
+            sb.append('         <td align=right>');
+            sb.append('           Senha:');
+            sb.append('         </td>');
+            sb.append('         <td>');
+            sb.append('           <input type=password maxlength=20 id=txt_senha value="" onkeypress=executaLoginOnKeyPress(event); style="margin:0px 0px 0px 0px;padding:5px;padding-left:22px;height:12px;background-repeat:no-repeat;background-color:#ffffff;background-image:url(images/lg_pass.gif);border:0px;font-size:10px;width:140px;font-family:tahoma;">');
+            sb.append('         </td>');
+            sb.append('       </tr>');
+            sb.append('       <tr>');
+            sb.append('         <td align=center valign=bottom height=28px colspan=2>');
+            sb.append('           <input type=button class=classbtn onclick=executaLogin() style=height:20px;width:90px; value=Login /><br />');
+            sb.append('         </td>');
+            sb.append('       </tr>');
+            sb.append('       <tr>');
+            sb.append('         <td height=10px></td>');
+            sb.append('       </tr>');
+            sb.append('     </table>');
+            sb.append('   </td>');
+            sb.append(' </tr>');
+            sb.append('</table>');
+            return sb.toString();
+        }
+
+        function executaLoginOnKeyPress(e)
+        {
+
+            if(getKeyCode(e) == 13)
+            {
+                executaLogin();
+            }
+
+        }
+
+        function InitLoginAbertoPadrao()
+        {
+            win.open('winLoginAbertoPadrao.html', true);
+            $('txt_nome').focus();
+        }
+
+        function HtmlLoginAbertoPadrao()
+        {
+            var sb = new StringBuilder();
+            sb.append('<table cellpadding=0 cellspacing=0 style=font-size:10px;font-family:tahoma;>');
+            sb.append(' <tr>');
+            sb.append('   <td valign=top>');
+            sb.append('     <table cellpadding=0 cellspacing=0 width=100% bgcolor=#CCCCCC>');
+            sb.append('       <tr>');
+            sb.append('        <td colspan=2><img src=images/login_top.gif border=0></td>');
+            sb.append('       </tr>');
+            sb.append('     </table>');
+            sb.append('   </td>');
+            sb.append(' </tr>');
+            sb.append(' <tr>');
+            sb.append('   <td bgcolor=#CCCCCC>');
+            sb.append('     <table>');
+            sb.append('       <tr>');
+            sb.append('         <td height=10px></td>');
+            sb.append('       </tr>');
+            sb.append('     </table>');
+            sb.append('     <table width=100% height=100% style=font-size:10px;font-family:tahoma;>');
+            sb.append('       <tr>');
+
+            sb.append('         <td align=right width=75px>');
+            sb.append('           E-mail:');
+            sb.append('         </td>');
+            sb.append('         <td>');
+            sb.append('           <input type=text maxlength=128 id=txt_loginabertopadrao value="" onkeypress=executaLoginOnKeyPress(event); style="margin:0px 0px 0px 0px;padding:5px;padding-left:22px;height:12px;background-repeat:no-repeat;background-color:#ffffff;background-image:url(images/lg_email.gif);border:0px;font-size:10px;width:140px;font-family:tahoma;">');
+            sb.append('         </td>');
+
+            sb.append('       </tr>');
+            sb.append('       <tr>');
+
+            sb.append('         <td align=right>');
+            sb.append('           Nome:');
+            sb.append('         </td>');
+            sb.append('         <td>');
+            sb.append('           <input type=text maxlength=200 id=txt_nome value="" style="margin:0px 0px 0px 0px;padding:5px;padding-left:22px;height:12px;background-repeat:no-repeat;background-color:#ffffff;background-image:url(images/lg_usr.gif);border:0px;font-size:10px;width:140px;font-family:tahoma;">');
+            sb.append('         </td>');
+
+            sb.append('       </tr>');
+            sb.append('       <tr>');
+            sb.append('         <td align=center valign=bottom height=28px colspan=2>');
+            sb.append('           <input type=button class=classbtn onclick=executaLogin() style=height:20px;width:90px; value=Login /><br />');
+            sb.append('         </td>');
+            sb.append('       </tr>');
+            sb.append('       <tr>');
+            sb.append('         <td height=10px></td>');
+            sb.append('       </tr>');
+            sb.append('     </table>');
+            sb.append('   </td>');
+            sb.append(' </tr>');
+            sb.append('</table>');
+            return sb.toString();
+        }
+    </script>
+    <iframe id="iframeTemplateLogin" name="iframeTemplateLogin" style="height: 100%; width: 100%;"
+        scrolling="no" frameborder="0" src='branco.html'></iframe>
+</body>
+
+<!-- Mirrored from v3.webcasters.com.br/Login.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Dec 2017 12:59:18 GMT -->
+</html>

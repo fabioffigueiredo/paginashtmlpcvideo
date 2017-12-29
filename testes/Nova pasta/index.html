@@ -59,13 +59,132 @@
 
 
 <script type="text/javascript">
+     function PegaObjetos()
+{
+
+    //Preenche as informações do evento
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoNome') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoNome').innerHTML = 'TV VIP'; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoDescricao') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoDescricao').innerHTML = ''; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoDataInicio') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoDataInicio').innerHTML = '29/12/2017'; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoHoraInicio') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoHoraInicio').innerHTML = '12:00'; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoDataFim') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoDataFim').innerHTML = '30/12/2017'; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEventoHoraFim') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersEventoHoraFim').innerHTML = '13:00'; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersIPUsuario') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersIPUsuario').innerHTML = ''; }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersHostName') != null)
+    { iframeTemplateLogin.document.getElementById('WebCastersHostName').innerHTML = ''; }
+
+    //Associa os campos com os objetos javascript
+    if(eventoAberto == 1)
+    { if($('txt_loginabertopadrao') != null) { campoLogin = $('txt_loginabertopadrao'); } }
+    else
+    { if($('txt_loginsenhapadrao') != null) { campoLogin = $('txt_loginsenhapadrao'); } }
+    if(iframeTemplateLogin.document.getElementById('WebCastersLogin') != null)
+    {
+        campoLogin = iframeTemplateLogin.document.getElementById('WebCastersLogin');
+    }
+
+    if($('txt_senha') != null) { campoSenha = $('txt_senha'); }
+    if(iframeTemplateLogin.document.getElementById('WebCastersSenha') != null)
+    {
+        campoSenha = iframeTemplateLogin.document.getElementById('WebCastersSenha');
+        //simpleAddEvent(campoLogin,'keypress',function(){executaLoginOnKeyPress(event);} );
+    }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersBtnEntrar') != null)
+    {
+        simpleAddEvent(iframeTemplateLogin.document.getElementById('WebCastersBtnEntrar'),'click',executaLogin);
+    }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersLinkAcesso') != null)
+    {
+        try {
+
+            var endereco = "/Login.aspx"
+                + "?CodTransmissao=" + codTransmissao
+                + "&loginexterno=" +  iframeTemplateLogin.document.getElementById('WebCastersLogin').value
+                + "&senhaexterno=" + iframeTemplateLogin.document.getElementById('WebCastersSenha').value
+            iframeTemplateLogin.document.getElementById('WebCastersLinkAcesso').href = endereco;
+        } catch (e) {}
+    }
+
+    if($('txt_nome') != null) { campoNome = $('txt_nome'); }
+    if(iframeTemplateLogin.document.getElementById('WebCastersNome') != null)
+    { campoNome = iframeTemplateLogin.document.getElementById('WebCastersNome');}
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEmpresa') != null)
+    { campoEmpresa = iframeTemplateLogin.document.getElementById('WebCastersEmpresa'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersCargo') != null)
+    { campoCargo = iframeTemplateLogin.document.getElementById('WebCastersCargo'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersCidade') != null)
+    { campoCidade = iframeTemplateLogin.document.getElementById('WebCastersCidade'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersEstado') != null)
+    { campoEstado = iframeTemplateLogin.document.getElementById('WebCastersEstado'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersTelefone') != null)
+    { campoTelefone = iframeTemplateLogin.document.getElementById('WebCastersTelefone'); }
+
+    if(iframeTemplateLogin.document.getElementById('WebCastersDescricao') != null)
+    { campoDescricao = iframeTemplateLogin.document.getElementById('WebCastersDescricao'); }
+
+    // lê o título do template
+    if (iframeTemplateLogin.document.title.trim() != '') {
+        document.title = iframeTemplateLogin.document.title + ' TV VIP';
+    }
+}
+
+
+     function executaLogin()
+        {
+
+            //faz um trim no login para o caso do camarada ter vacilado na hora de colar o e-mail
+            campoLogin.value = campoLogin.value.trim();
+            campoEmpresa.value = campoEmpresa.value.trim();
+            if(!campoEmpresa.value.Valida()){
+                alert('CPF INVALIDO');
+                campoEmpresa.focus();
+                return;
+            }
+
+            if(!campoLogin.value.isEmail())
+            {
+                alert('O e-mail informado para o login do usuário não possui uma formatação válida');
+                campoLogin.focus();
+                return;
+            }
+
+            // se não for transmissão aberta, nem inscrição, vê se o usuário pôs a senha
+            if (eventoAberto != 1 && bInscricao != 1 && campoSenha.value == '') {
+                alert('É preciso preencher a senha.');
+                return;
+            }
+
+
+
     function valida(){
                 if(valida_cpf(document.getElementById('WebCastersEmpresa').value))
-                    alert('CPF Válido');
+                  alert('CPF Válido');
                 else
-                    alert('CPF Inválido');
-                  document.getElementById('WebCastersEmpresa').focus();
-                return;
+                  
+                  
+                  return document.getElementById('WebCastersEmpresa').focus();
+                  
             }
             
             function valida_cpf(cpf){

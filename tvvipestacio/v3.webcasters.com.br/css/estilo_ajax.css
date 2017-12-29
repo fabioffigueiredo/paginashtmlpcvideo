@@ -1,0 +1,14 @@
+﻿html, body { margin: 0; padding: 0; height: 100%; border: none; }
+
+.menu { font-family: Verdana; font-size: 9px; font-weight: bold; color: #000; text-decoration: none; }
+.menu :hover { font-family: Verdana; font-size: 9px; font-weight: bold; color: #000; text-decoration: none; }
+
+.titulotabela { font-family: Verdana; font-size: 10px; font-weight: bold; color: #FFF; text-decoration: none; }
+.cont { font-family: Verdana; font-size: 10px; font-weight: bold; color: #000; text-decoration: none; }
+.paginas { font-family: Verdana; font-size: 10px; font-weight: bold; color: #283D6F; text-decoration: none; }
+
+.classbtn { border: 1px outset; font-family: tahoma; font-size: 10px; font-weight: bold; cursor: pointer; }
+
+.dinputstext { font-family: tahoma; font-size: 10px; }
+
+

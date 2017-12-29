@@ -1,0 +1,96 @@
+<html>
+
+<!-- Mirrored from v3.webcasters.com.br/clientes/Estacio/templatesLogin/1058_2E74930C1650B088E4DC175BBABC1E6D/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Dec 2017 12:59:18 GMT -->
+<head>
+<style type="text/css">
+        body {
+	font-family: arial, helvetica;
+	font-size:12px;    		/*background-image:url("Screenshot.jpg");
+    		background-repeat:no-repeat;
+    		background-position:top center;*/
+    	}
+    	.aviso {font-size:10px;}
+    	input { 
+    	    border:1px solid #7F9DB9; 
+    	    background-color: #FFFFFF;
+    	    width: 320px;
+    	}
+    	table {
+    	    background-color: #FFFFFF;
+    	}
+    	.titulo {
+    	    background-color: #01689a;
+    	    color: #FFFFFF;
+    	    font-weight:bold;
+    	}
+    	#WebCastersBtnEntrar {
+    	    	font-size:14px;
+    	    	font-weight:bold;
+    	    	border-style:solid;
+    	    	border-color:#FFFFFF;
+    	    	border-width:1px;
+    	    	width: 90px;
+    	}
+</style>
+
+<script type="text/javascript" src="cidades-estados-1.0-utf8.html"></script>
+
+<script type="text/javascript">
+window.onload = function() {
+  new dgCidadesEstados({
+    estado: document.getElementById('sEstado'),
+    cidade: document.getElementById('sCidade'),
+    change: true
+  });
+  
+    var $ = function (id) { return document.getElementById(id) };
+    
+    $('sEstado').onblur = function () {
+        $('WebCastersEstado').value = $('sEstado').options[$('sEstado').selectedIndex].value;
+    };
+    
+}
+</script>
+</head>
+<body>
+<center>
+
+
+<img src="logo.png" />
+
+	<h2>Bem vindo!</h2>
+<h4>Favor preencher os campos abaixo:</h4>
+<br />
+	
+
+	<table border=0 cellpadding=4 cellspacing=4>
+
+	
+
+<tr>
+		<td align=right class=titulo>Nome:</td>
+		<td align=left><input type=text id=WebCastersNome /></td>
+	</tr>
+    <tr>
+		<td align=right class=titulo>E-mail:</td>
+		<td align=left><input type=text id=WebCastersLogin /></td>
+    
+        
+    
+	
+    <tr>
+		<td align=right class=titulo>Matricula:</td>
+		<td align=left><input type=text id=WebCastersEmpresa /></td>
+	</tr>
+    
+
+<tr>
+		<td align=right colspan=2 class=titulo><input type=button id=WebCastersBtnEntrar value=Entrar /></td>
+	</tr>
+	</table>
+</center>
+
+</body>
+
+<!-- Mirrored from v3.webcasters.com.br/clientes/Estacio/templatesLogin/1058_2E74930C1650B088E4DC175BBABC1E6D/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Dec 2017 12:59:18 GMT -->
+</html>
