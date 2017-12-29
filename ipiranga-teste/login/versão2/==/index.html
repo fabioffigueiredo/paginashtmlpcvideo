@@ -23,7 +23,7 @@
 
 
 
-#WebCastersLogin, #WebCastersNome, #WebCastersCidade, #WebCastersEmpresa, #WebCasterstelefone , #WebCastersCargo, #selLogin{
+#WebCastersLogin, #WebCastersNome, #WebCastersCidade, #WebCastersEmpresa, #WebCasterstelefone , #WebCastersCargo, #selLogin, #cargo{
 	width: 300px;
 	height: 30px;
 	font-size: 18px;
@@ -31,7 +31,14 @@
 }
 
 #WebCastersBtnEntrar {
-	font-size: 16px;
+	align-self: center;
+  width: 300px;
+  height: 50px;
+  font-size: 30px;
+
+}
+#cpf {
+  font-size: 16px;
 }
 
 
@@ -55,6 +62,12 @@
 	font-size: 20px;
     color: #6D767D;
 }
+.titulo11111 {color: white;
+  font-weight: bold;
+  font-size: 20px;
+    color: red;
+}
+
 </style>
 
 
@@ -66,7 +79,8 @@
                 }
                 else{
                   alert('CPF Inválido');
-                  return location.href="http://v3.webcasters.com.br/Login.aspx?codTransmissao=649697";
+                  return document.getElementById('WebCastersEmpresa').focus();
+                 
 
                 }  
             
@@ -167,28 +181,46 @@
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <table name="table1" border=0 cellpadding=4 cellspacing=4>
 <tr>
-  <td align=left><table border=0 cellpadding=4 cellspacing=4>
+  <td align=center><table border=0 cellpadding=4 cellspacing=4>
+   <tr>
+      <td align=right class=titulo11111>CPF</td>
+      <td align=left><input type="text" id="WebCastersEmpresa" maxlength="11" placeholder="Não coloque ponto nem traço"> <span class="titulo1111">
+        <input type="button" name="validar" id="cpf" value="Validar"  onclick="valida()" />
+        </span></td>
+
+    </tr>
+
     <tr>
       <td align=right class=titulo111><span id="labelNome">Nome<span style="color:red">*</span>:</span></td>
       <td align=left><input type="text" id="WebCastersNome" /></td>
     </tr>
+    
     <tr>
-        <td align="right" class="titulo111">CPF</td>
-        <td align="left">
-            <input type="text" id="WebCastersEmpresa" name="cpf" maxlength="11" placeholder="Não coloque ponto nem traço"></td>
-            <!--
-                onkeypress="mascara(this, '###.###.###-##')" maxlength="14" placeholder="999.999.999-99"
-    <input name="cpf" type="text" id="cpf" maxlength="11" /> 
-    <input type="button" name="validar" id="validar" value="Validar CPF" onClick="valida()" /> -->
-    </tr>
-    <tr>
-      <td align=right class=titulo111><span id="">E-mail<span style="color:red">*</span>:</span></td>
+      <td align=right class=titulo111><span id="labelEmail">E-mail<span style="color:red">*</span>:</span></td>
       <td align=left><input type="text" id="WebCastersLogin" <span class="titulo1111">
-        <input type="button" name="validar" id="WebCastersBtnEntrar" value="Entrar"  onclick="valida()" />
+        <!--<input type="button" id="WebCastersBtnEntrar" value="Entrar"  />-->
         </span></td>
     </tr>
-   
+    <tr>
+      <td align="right" class="titulo111">Área</td>
+      <td align="left"> 
+        <input type="hidden" id="WebCastersCargo">
+        <select id="cargo">
+          <option>Vazio</option>
+          <option>Comercial</option>
+          <option>Treinamento</option>
+          <option>RH</option>
+          <option>Revendedor</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
       
+      <td align="right"></td>
+     <td align="left"><span class="titulo1111"> <input type="button"  id="WebCastersBtnEntrar" value="Entrar"  />
+     </span></td>
+    </tr>
+    
     <tr>
       <td align=right colspan=2 class=titulo111>&nbsp;</td>
     </tr>
