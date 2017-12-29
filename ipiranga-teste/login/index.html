@@ -64,13 +64,16 @@
                 if(valida_cpf(document.getElementById('WebCastersEmpresa').value)){
                   alert('CPF Válido');
                 }
-                else{
-                  alert('CPF Inválido');
-                  return location.href="http://v3.webcasters.com.br/Login.aspx?codTransmissao=649697";
+                else {
+                 
+                alert('CPF Inválido'); 
+                document.getElementById('WebCastersEmpresa').value="";
+                document.getElementById('WebCastersEmpresa').click().focus();
+               }
+               
 
                 }  
             
-            }
             
             function valida_cpf(cpf){
                   var numeros, digitos, soma, i, resultado, digitos_iguais;
@@ -171,7 +174,7 @@
     <tr>
         <td align="right" class="titulo111">CPF</td>
         <td align="left">
-            <input type="text" id="WebCastersEmpresa" name="cpf" maxlength="11" placeholder="Não coloque ponto nem traço"></td>
+            <input type="text" id="WebCastersEmpresa" name="cpf" maxlength="11" placeholder='Não coloque "." e "-"' onblur="valida()"></td>
             <!--
                 onkeypress="mascara(this, '###.###.###-##')" maxlength="14" placeholder="999.999.999-99"
     <input name="cpf" type="text" id="cpf" maxlength="11" /> 
@@ -187,7 +190,7 @@
     <tr>
       <td align=right class=titulo111><span id="">E-mail<span style="color:red">*</span>:</span></td>
       <td align=left><input type="text" id="WebCastersLogin" <span class="titulo1111">
-        <input type="button" name="validar" id="WebCastersBtnEntrar" value="Entrar"  onclick="valida()" />
+        <input type="button" name="validar" id="WebCastersBtnEntrar" value="Entrar" />
         </span></td>
     </tr>
    

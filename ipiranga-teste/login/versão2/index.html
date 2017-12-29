@@ -79,7 +79,7 @@
                 }
                 else{
                   alert('CPF Inválido');
-                  return document.getElementById('WebCastersEmpresa').focus();
+                   document.getElementById('WebCastersEmpresa').value="";
                  
 
                 }  
@@ -184,8 +184,8 @@
   <td align=center><table border=0 cellpadding=4 cellspacing=4>
    <tr>
       <td align=right class=titulo11111>CPF</td>
-      <td align=left><input type="text" id="WebCastersEmpresa" maxlength="11" placeholder="Não coloque ponto nem traço"> <span class="titulo1111">
-        <input type="button" name="validar" id="cpf" value="Validar"  onclick="valida()" />
+      <td align=left><input type="text" id="WebCastersEmpresa" maxlength="11" placeholder="Não coloque ponto nem traço" onblur="valida()"> <span class="titulo1111">
+        
         </span></td>
 
     </tr>
@@ -205,7 +205,7 @@
       <td align="right" class="titulo111">Área</td>
       <td align="left"> 
         <input type="hidden" id="WebCastersCargo">
-        <select id="cargo">
+        <select id="WebCastersCargo">
           <option>Vazio</option>
           <option>Comercial</option>
           <option>Treinamento</option>
