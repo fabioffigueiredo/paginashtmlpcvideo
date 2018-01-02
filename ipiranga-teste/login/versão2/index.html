@@ -23,7 +23,7 @@
 
 
 
-#WebCastersLogin, #WebCastersNome, #WebCastersCidade, #WebCastersEmpresa, #WebCasterstelefone , #WebCastersCargo, #selLogin, #cargo{
+#WebCastersLogin, #WebCastersNome, #WebCastersCidade, #WebCastersEmpresa, #WebCasterstelefone , #WebCastersCargo, #selLogin, #cargo, #cidade{
 	width: 300px;
 	height: 30px;
 	font-size: 18px;
@@ -75,7 +75,7 @@
     function valida(){
                
                 if(valida_cpf(document.getElementById('WebCastersEmpresa').value)){
-                  alert('CPF Válido');
+                  
                 }
                 else{
                   alert('CPF Inválido');
@@ -204,16 +204,18 @@
     <tr>
       <td align="right" class="titulo111">Área</td>
       <td align="left"> 
-        <input type="hidden" id="WebCastersCargo">
-        <select id="WebCastersCargo">
-          <option>Vazio</option>
-          <option>Comercial</option>
-          <option>Treinamento</option>
-          <option>RH</option>
-          <option>Revendedor</option>
+        <input type="hidden" id="cidade">
+        <select id="WebCastersCidade">
+          <option >Selecione sua área</option>
+          <option >Comercial</option>
+          <option >Treinamento</option>
+          <option >RH</option>
+          <option >Revendedor</option>
         </select>
       </td>
     </tr>
+     
+    
     <tr>
       
       <td align="right"></td>
