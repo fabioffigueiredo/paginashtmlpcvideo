@@ -1,0 +1,852 @@
+﻿/*
+    Estilo do Corpo
+    * Se uma imagem de fundo for definida aqui "background-image:url()" ela será utilizada 
+      no lugar da imagem do padrão de transmissão, caso contrário a imagem do padrão de 
+      transmissão será utilizada 
+      
+    * A cor de fundo será definida no padrão de transmissão
+      
+    * O tamanho do body definirá o tamanho da janela de visualizador que será aberta
+    
+*/
+body {
+	width:1121px;
+	height:650px;
+	
+	color: #333333;
+	background-color: #fbfbfb;
+	background-repeat: no-repeat;
+
+	overflow:hidden;
+	margin: 0px;
+	color: #000;
+	
+}
+
+/* 
+	QUADRO DA APLICAÇÃO
+	* será centralizada na página
+*/
+
+#Webcasters_FundoAplicacao{
+	width: 1122px;
+	height:699px;
+	background-repeat:no-repeat;
+	text-align:left;
+	
+		
+}
+
+#Webcasters_Aplicacao{
+	position:absolute;
+	
+}
+
+/*
+    TITULO DA TRANSMISSAO
+     *A cor será definida no padrão de transmissão 
+*/
+#WebCasters_TituloTransmissao {
+	position: absolute;
+	position: absolute;
+	left: 311px;
+	top: 10px;
+	width: 640px;
+	height: 45px;
+	overflow: hidden;
+	font-family: sans-serif;
+	font-size: 20px;
+	line-height: 45px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.Separador
+{
+    position:absolute;
+    width:2px;
+    height:21px;
+    top:6px;
+    background-image:url(Separador.png);
+}
+
+
+/*
+Botões para tocar o estado do audio para mudo */
+#WebCasters_BtnMudo {
+	position:absolute;
+	left:155px;
+	top:12px;
+	width:8px;
+	height:12px;
+	background-repeat:no-repeat;
+	background-image:url(Mudo.png);
+	cursor:pointer;
+}
+#WebCasters_BtnMudo_Sel {
+	position:absolute;
+	left:154px;
+	top:12px;
+	width:8px;
+	height:12px;
+	background-repeat:no-repeat;
+	background-image:url(MudoSel.png);
+	cursor:pointer;
+}
+
+
+
+/* 
+Área na qual o slider do volume de áudio correrá 
+(o sentido é dado pelo tamanho) */
+.ImagemAreaSliderAudio {
+	position:absolute;
+	left:176px;
+	top:12px;
+	width:70px;
+	height:11px;
+	background-repeat:no-repeat;
+	background-image:url(SliderAudio.png);
+	background-color:Transparent;
+	overflow:visible;
+}
+#WebCasters_AreaSliderAudio {
+	position:absolute;
+	left:179px;
+	top:12px;
+	width:55px;
+	height:11px;
+	background-color:Transparent;
+	overflow:visible;
+}
+
+/*
+Slider que indica o volume do áudio 
+(a posição é definida pela área do slider de audio)  */
+#WebCasters_SliderAudio {
+	position:absolute;
+	left:1px;
+	top:-3px;
+	width:15px;
+	height:15px;
+	background-repeat:no-repeat;
+	background-image:url(Slider.png);
+	background-color:Transparent;
+	cursor:pointer;
+	right: 1px;
+}
+
+
+/*
+Botão para deixar o vídeo em tela cheia */
+#WebCasters_BtnTelaCheia{
+	position:absolute;
+	left:372px;
+	top:3px;
+	width:24px;
+	height:24px;
+	background-repeat:no-repeat;
+	background-image:url(full.png);
+	background-color:Transparent;
+	cursor:pointer;
+}
+
+
+
+
+/* ===-----------------------------=== */
+/* ===  A R E A   D O   V I D E O  === */
+/* ===-----------------------------=== */
+ 
+
+/* o estilo abaixo define a posição e dimensões do vídeo
+*/
+#WebCasters_AreaVideo {
+	 position:absolute;
+    left:20px; top:157px;
+    width:570px; height:350px;
+    
+    visibility:visible;
+    background-color: #ffffff;
+}
+
+.FundoAreaVideo
+{
+	position:absolute;
+	left:209px;
+	top:161px;
+
+}
+
+/* botão para arrastar o vídeo
+	*Caso queria que o vídeo possa ser arrastado pelo usuário, altere a propriedade display*/
+#WebCasters_BtnArrastarVideo {
+    position:absolute;
+    left:330px; top:10px;
+    width:19px; height:19px;
+    
+    background-repeat:no-repeat;
+    background-image:url(wcpdr_arrastarvideo.gif);
+    background-color:Transparent;
+    
+    cursor:pointer;
+    
+    display:none;
+}
+
+/* Caixa de texto que contém a legenda 
+	*A cor da legenda será definida no padrão de transmissão
+*/
+#WebCasters_Legenda {
+    position:absolute; 
+    left:240px; top:548px;
+    width:320px; height:18px;
+    
+    background-color: Transparent;
+    
+    font-family:sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    text-align:center;
+    
+    overflow:hidden;
+    
+    z-index:999;
+}
+
+
+/* ===---------------------------=== */
+/* ===  A B A S                  === */
+/* ===---------------------------=== */
+
+
+.aba, .abaSelecionada {
+	border: 0px;
+	
+	padding: 0px;
+
+	text-align: center;
+	font-size: 10px;
+	font-family: sans-serif;
+    line-height: 15px;
+}
+
+.aba {
+	background: #c8c8c8; 
+	color: #707070; 
+	
+	cursor:pointer;
+}
+
+.abaSelecionada {
+	background: #eaeaea; 
+	color: #FFF; 
+	
+	font-weight: bold;
+	
+	cursor:default;
+}
+
+.area {
+	border: 0px solid #eaeaea; 
+	background: #FFF;
+	
+	padding:0px;
+	
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+
+/* ===---------------------------=== */
+/* ===  A R E A   1              === */
+/* ===---------------------------=== */
+
+
+.area1 {
+    position:absolute;
+    left:397px; top:156px;
+    width:605px;
+    height:455px; height:'457px';
+    overflow:auto;
+
+}
+
+
+#WebCasters_Slides_Btn, #WebCasters_Slides_Btn_Sel {
+	position: absolute;
+	left: 400px;
+	top: 589px;
+	width: 70px;
+	height: 16px;
+}
+<!--
+#WebCasters_ArquivosAuxiliares_Btn, #WebCasters_ArquivosAuxiliares_Btn_Sel {
+    position:absolute;
+    left:475px; top:615px;
+    width:130px; height:16px;
+    display: none;
+    
+}-->
+    
+#WebCasters_InfoTransmissao_Btn, #WebCasters_InfoTransmissao_Btn_Sel {
+    position:absolute;
+    left:610px; top:615px;
+    width:130px; height:16px;
+    display: none;
+}
+    
+#WebCasters_Enquetes_Btn, #WebCasters_Enquetes_Btn_Sel {
+	position: absolute;
+	left: 475px;
+	top: 589px;
+	width: 100px;
+	height: 16px;
+}
+
+#WebCasters_Ajuda_Btn, #WebCasters_Ajuda_Btn_Sel {
+    position:absolute;
+    left:945px; top:615		px;
+    width:50px; height:16px;
+    
+}
+
+.detalheArea1{
+    position:absolute;
+    left:340px; top:470px;
+    width:459px; width:'455px';
+    height:10px;
+    
+    background-color:#eaeaea; 
+    cursor:default; overflow:hidden;
+    z-index:999;   
+
+    display: none;
+
+}
+
+
+
+
+
+
+/* ===---------------------------=== */
+/* ===  A R E A   2              === */
+/* ===---------------------------=== */
+
+	
+/* 
+abas chat e interacao multimidia */
+#WebCasters_InteracaoMultimidia_Btn, #WebCasters_InteracaoMultimidia_Btn_Sel {
+	position:absolute;
+    width:74px; height:16px;
+    display:visible;
+}
+
+
+#WebCasters_Chat_Area {
+	position:absolute;
+    display:visible;
+	background-image:url(fundo_topico_chat_3.png);
+	background-repeat:no-repeat;
+	
+}
+
+
+
+
+
+/* ===---------------------------=== */
+/* ===  A R E A   D O   C H A T  === */
+/* ===---------------------------=== */
+ 
+ 
+/* COMPONENTES DO CHAT */
+ 
+/*
+Botões para exibir a área de chat */
+#WebCasters_Chat_Btn, #WebCasters_Chat_Btn_Sel {
+    position:absolute;
+    width:64px; height:16px;
+    display:visible;
+}
+
+/*
+Área em que as mensagens serão exibidas */
+#WebCasters_Chat_Mensagens {
+	position: absolute;
+	left: 16px;
+	top: 39px;
+	width: 330px;
+	height: 240px;
+	background-color: #FFFFFF;
+	overflow: auto;
+	display: visible;
+	border-style: solid;
+	border-width: 1px;
+}
+
+/*
+Caixa de entrada de mensagens */
+#WebCasters_Chat_Entrada {
+	position: absolute;
+	left: 16px;
+	top: 300px;
+	width: 280px;
+	height: 35px;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	background-color: #FFFFFF;
+	font-family: sans-serif;
+	font-size: x-small;
+	font-weight: normal;
+	text-align: left;
+	color: #000000;
+	display: visible;
+}
+
+/*
+Botão "enviar mensagem" */
+#WebCasters_Chat_BtnEnviar {
+	position: absolute;
+	left: 300px;
+	top: 300px;
+	width: 25px;
+	height: 21px;
+	padding: 0px;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background-color: #F5F5F5;
+	background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+	background-repeat: repeat-x;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #A2A2A2;
+	border-image: none;
+	border-radius: 4px 4px 4px 4px;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+	color: #333333;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 20px;
+	margin-bottom: 0;
+	padding-top: 4px;
+	padding-right: 12px;
+	padding-left: 6px;
+	padding-bottom: 4px;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 1px;
+}
+
+
+/* MENSAGENS DO CHAT */
+
+
+/*
+Mensagens em geral */
+.WebCastersChatMensagem{
+    margin-bottom: 6px;
+    
+    font-family: sans-serif;
+    font-size: 12px;
+    color:#000000;
+}
+
+/*
+Mensagens do próprio autor */
+.WebCastersChatMensagemAutor{
+    background-color:#e7edef;
+}
+
+/*
+Mensagens do moderador */
+.WebCastersChatMensagemModerador{
+    font-size:x-small;
+    color:#FFFFFF;
+    background-color:#d71b1b;
+}
+
+
+/*
+Nome do remetente da mensagem */
+.WebCastersChatMensagemNome{
+    font-weight:bold;
+}
+
+/*
+data de envio da mensagem */
+.WebCastersChatMensagemData{
+    display:none;
+}
+
+/*
+hora de envio da mensagem */
+.WebCastersChatMensagemHora{
+    font-weight:bold;
+    color: #666666;
+}
+
+
+
+
+
+
+
+
+
+
+/* ===----------------------------=== */
+/* ===  A J U D A   P A D R A O   === */
+/* ===----------------------------=== */
+
+
+
+/* Estilos para o texto de Ajuda Padrão*/
+.WebCastersAjudaTitulo{
+    font-size:medium;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:12px;
+}
+
+.WebCastersAjudaParagrafo{
+    font-size:small;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.WebCastersAjudaItem{
+    font-weight:bold;
+}
+
+.WebCastersAjudaTexto{}     
+
+
+
+/* ===-------------------------------------------=== */
+/* ===  A R Q U I V O S    A U X I L I A R E S   === */
+/* ===-------------------------------------------=== */
+
+.WebCastersArquivosAuxiliaresNome {
+	font-size:14px;
+	font-weight:bold;
+}
+
+.WebCastersArquivosAuxiliaresDescricao {
+	font-size:12px;
+	margin-top:2px;
+}
+
+
+/* ===--------------------------------------------------------=== */
+/* ===  I N F O R M A Ç Õ E S   D A   T R A N S M I S S Ã O   === */
+/* ===--------------------------------------------------------=== */
+
+.WebCastersInfoTransmissao {
+	margin-left: 10px;
+	font-size: 12px;
+}
+
+.WebCastersInfoTransmissaoNome {
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+.WebCastersInfoTransmissaoInicio, .WebCastersInfoTransmissaoFim, .WebCastersInfoTransmissaoDuracao{
+	margin-left: 30px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.WebCastersInfoTransmissaoDescricao {
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+.WebCastersInfoTransmissaoAgendas {
+	margin-left: 10px;
+	margin-top: 15px;
+	font-size: 12px;
+}
+
+.WebCastersInfoTransmissaoAgendasTitulo {
+	font-weight:bold;
+	font-size: 14px;
+}
+
+.WebCastersInfoTransmissaoAgenda {
+	margin-top:10px;
+	margin-left: 5px;
+}
+
+.WebCastersInfoTransmissaoAgendaNome {
+	font-weight:bold;
+	font-size: 14px;
+}
+
+.WebCastersInfoTransmissaoAgendaData {
+	margin-left: 15px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.WebCastersInfoTransmissaoAgendaDescricao {
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+.WebCastersInfoTransmissaoPalestrantes {
+	margin-top: 8px;
+	margin-left: 15px;
+}
+
+.WebCastersInfoTransmissaoPalestrantesTitulo {
+	font-weight: bold;
+}
+
+.WebCastersInfoTransmissaoPalestranteNomeLista {
+	margin-left: 18px;
+	color: #5050FF;
+	text-decoration:underline;
+    cursor:pointer;
+}
+
+/* ===------------------------------------------------=== */
+/* ===  I N F O R M A Ç Ã O   P A L E S T R A N T E   === */
+/* ===------------------------------------------------=== */
+
+.WebCastersInfoTransmissaoPalestranteFoto {
+    width:30%;
+    height:30%;
+    margin: 2px 2px 10px 2px;
+    display:block;
+}
+
+.WebCastersInfoTransmissaoPalestranteNome {
+	font-size: 16px;
+	font-weight: bold;
+	margin-top:10px;
+	margin-bottom:8px;
+	margin-left: 20px;
+}
+
+.WebCastersInfoTransmissaoPalestranteDescricao {
+	font-size: 14px;
+	margin-left: 28px;
+}
+.WebCastersInfoTransmissaoPalestranteVoltar {
+	margin-top: 15px;
+    margin-left: 20px;
+    font-size:14px;
+    color: #5050FF;
+	text-decoration:underline;
+    cursor:pointer;
+}
+
+
+/* ===-----------------------------------=== */
+/* ===  A R E A   D E   C R E D I T O S  === */
+/* ===-----------------------------------=== */
+
+#WebCasters_Credito_Area {
+    position:absolute;
+    left:5px; top:580px;
+    width:210px; height:20px;
+
+	background: #d7d7d7;
+	color:#000000;	
+	font-family: sans-serif;
+	display:none;
+	
+    
+}
+
+.tituloCreditos {
+    position:absolute;
+    left:0px; top:0px;
+    width:48px; height:20px;
+        
+    background-color: #d7d7d7;
+    
+    color: #000000;
+    font-weight: bold;
+    
+    line-height:20px;
+}
+
+
+#WebCasters_Credito_Minutos {
+    position:absolute; 
+    left:53px; top:2px;
+    width:50px;
+}
+
+.textoMin {
+    position:absolute;
+    left:105px; top:0px;
+    width:150px; height:20px;
+}
+
+#WebCasters_Credito_Acessos {
+    position:absolute; 
+    left:130px; top:2px;
+    width:45px;
+}
+
+.textoAcessos {
+    position:absolute;
+    left:177px; top:0px;
+    width:150px; height:20px;
+    
+}
+
+#WebCasters_Credito_Area DIV {
+    height:14px;
+    height:"16px"; /* hack para IE */
+    
+    overflow:hidden;
+    background-color:#FFFFFF;
+    border: solid 1px #BBB;
+    
+    font-size: 12px;
+    
+    text-align:right;
+}
+
+#WebCasters_Credito_Area SPAN {
+    font-size:10px;
+    text-align:left;
+    line-height:20px;
+    
+}
+
+
+
+
+
+
+
+
+
+/* ===-------------------------------------------=== */
+/* ===  A R E A   D E   C O N F I G U R A C A O  === */
+/* ===-------------------------------------------=== */
+
+#WebCasters_Configuracao_Area {
+    position:absolute;
+    left:635px; top:567px;
+    width:160px; height:33px;
+    
+    background-color:#eaeaea;
+    cursor:default;
+	display:none;
+    
+}
+    
+#WebCasters_Configuracao_Velocidade {
+    position:absolute; 
+    left:6px; top:7px;
+    width:147px; height:21px;
+    
+    background-color:#FFFFFF;
+    
+    font-family:Arial, Verdana, Helvetica, sans-serif;
+    font-size:xx-small;
+    font-weight:normal;
+    text-align:right;
+    color:#000000;
+}
+
+#WebCasters_Configuracao_Btn {
+    position:absolute;
+    left:725px; top:583px;
+    width:70px; height:17px;
+    cursor:pointer;
+	display:none;
+}
+
+#WebCasters_Configuracao_Btn_Sel {
+    position:absolute;
+    left:725px; top:550px;
+    width:70px; height:17px;
+    cursor:pointer;
+	display:none;
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+/* ===-----------------------------=== */
+/* ===  B A N N E R S              === */
+/* ===-----------------------------=== */
+
+
+/*
+    Definições de posicionamento e dimensões de Banners
+*/
+.banner {
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    overflow: hidden;
+    
+    border: none 0px #0;
+    background-color: Transparent;
+}
+
+#WebCasters_Banner_1 {
+    position:absolute;
+    left:340px; top:48px;
+    width:455px;
+    height:60px; height:'64px';
+    display:none;
+}
+
+#WebCasters_Banner_2 {
+	position:absolute;
+	left:1017px;
+	top:17px;
+	width:84px;
+	height:30px;
+}
+
+#WebCasters_Banner_3 {
+	position:absolute;
+	left:765px;
+	top:106px;
+	width:29px;
+	height:60px;
+}
+
+/* 
+areas chat e interacaoMultimidia */
+#WebCasters_InteracaoMultimidia_Area {
+
+	width: 1091px;
+	height: 291px;
+	position: relative;
+	top:286px;
+	left: 13px;
+	z-index: -1;
+}
