@@ -22,7 +22,7 @@
 }
 
 
-
+/* estilo dos formulário */
 #WebCastersLogin, #WebCastersNome, #WebCastersCidade, #WebCastersEmpresa, #WebCasterstelefone , #WebCastersCargo, #selLogin, #cargo{
 	width: 300px;
 	height: 30px;
@@ -70,6 +70,7 @@
 
 </style>
 
+<!-- Função de validação de CPF -->
 
 <script type="text/javascript">
     function valida(){
@@ -182,6 +183,7 @@
 <table name="table1" border=0 cellpadding=4 cellspacing=4>
 <tr>
   <td align=center><table border=0 cellpadding=4 cellspacing=4>
+  <!-- Campo de CPF -->
    <tr>
       <td align=right class=titulo11111>CPF</td>
       <td align=left><input type="text" id="WebCastersEmpresa" maxlength="11" placeholder="Não coloque ponto nem traço" onblur="valida()"> <span class="titulo1111">
@@ -189,18 +191,21 @@
         </span></td>
 
     </tr>
-
+    <!-- Campo de nome -->
     <tr>
       <td align=right class=titulo111><span id="labelNome">Nome<span style="color:red">*</span>:</span></td>
       <td align=left><input type="text" id="WebCastersNome" /></td>
     </tr>
-    
+    <!-- Campo de email -->
     <tr>
       <td align=right class=titulo111><span id="labelEmail">E-mail<span style="color:red">*</span>:</span></td>
       <td align=left><input type="text" id="WebCastersLogin" <span class="titulo1111">
         <!--<input type="button" id="WebCastersBtnEntrar" value="Entrar"  />-->
         </span></td>
     </tr>
+
+    <!-- Campo de área -->
+
     <tr>
       <td align="right" class="titulo111">Área</td>
       <td align="left"> 
